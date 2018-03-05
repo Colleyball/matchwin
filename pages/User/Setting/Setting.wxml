@@ -1,0 +1,25 @@
+<view class="Top">
+  <image src="https://volleywang.cn/liansaiquan/images/wechat/user/setting/logo.png" class="userpic" mode='aspectfit'></image>
+  <view class="name" selectable='true'>赛事窗</view>
+</view>
+
+<view class="card">
+  <view class="pic"></view>
+  <view class="title">
+    <text selectable='true'>一站式体育赛事运营商
+          让高校举办体育赛事更轻松
+          “赛事窗”小程序是MatchWin.cn官方小程序版本，开发者为Alxd。
+    </text>
+  </view>
+</view>
+
+<view class="card">
+  <view class="pic2"></view>
+  <view class="title">
+    <text selectable='true'>如果你对本小程序有建议或者意见，亦或者是希望寻求进一步交流，欢迎通过如下渠道进行反馈
+
+    E-mail：cheng@volleywang.cn
+    Wechat：q648419561
+    </text>
+  </view>
+</view>

@@ -1,0 +1,98 @@
+.search{
+  width: 100%;
+  height: 140rpx;
+  background-color: #3369E8;
+  position: fixed;
+  top:0;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0rpx 10rpx 50rpx rgba(0, 0, 0,0.5);
+}
+
+.searcharea{
+  height: 85rpx;
+  line-height: 85rpx;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  box-shadow: 0rpx 10rpx 20rpx rgba(0, 0, 0,0.4);
+  margin-left: 5%;
+  border-radius: 5rpx;
+}
+
+.searchbox{
+  height: 85rpx;
+  width: 80%;
+  border: 0;
+  border-radius: 5rpx 0 0 5rpx;
+}
+
+.btn{
+  height: 100%;
+  width: 20%;
+  margin-left: 0rpx;
+  border: 0;
+}
+
+.submit{
+ height: 100%;
+ width: 100%;
+ border-radius: 0rpx 5rpx 5rpx 0rpx;
+}
+
+.hover{
+  background-color: rgba(0, 0, 0,0.1)
+}
+
+.title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  margin-top: 10rpx;
+  color: #fff
+}
+
+.actlist{
+  margin-top: 200rpx;
+}
+
+.act{
+  position: relative;
+  width: 680rpx;
+  height:520rpx;
+  background-color: white;
+  padding: 0;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 20rpx 70rpx rgba(0, 0, 0,0.3);
+  margin: 0rpx 0rpx 70rpx 35rpx;
+}
+
+.actpic{
+  width: 680rpx;
+  height: 360rpx;
+  margin:0;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.actname{
+  margin-top: 0;
+  width: 90%;
+  margin-left: 5%;
+  height: 90rpx;
+  text-align: left;
+  font-size: 45rpx;
+  line-height: 90rpx;
+  color: rgba(0, 0, 0,0.7)
+}
+
+.actdetail{
+  width: 90%;
+  margin-left: 5%;
+  height: 60rpx;
+  text-align: left;
+  font-size: 38rpx;
+  line-height: 60rpx;
+  color: rgba(0, 0, 0,0.5)
+}

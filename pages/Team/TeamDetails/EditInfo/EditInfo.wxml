@@ -1,0 +1,25 @@
+<block wx:if="{{type == 1}}">
+<view class="top">编辑球员信息</view>
+<view class="playername">{{name}}</view>
+<form bindsubmit="formSubmit">
+  <view class="tablename">修改姓名</view>
+  <view class="inputView">
+    <input focus="true" placeholder-style="color:gray" placeholder="请输入姓名" maxlength="8" name="name" style='height:100rpx;line-height:100rpx;width:100%'/>
+  </view>
+  <button formType="submit" class="submit">确定修改</button>
+  <button bindtap='del' class="submit">退出球队</button>
+</form>
+</block>
+
+<block wx:if="{{type == 2}}">
+<view class="top">编辑球队信息</view>
+<view class="playername">{{name}}</view>
+<form bindsubmit="formSubmit2">
+  <view class="tablename">修改姓名</view>
+  <view class="inputView">
+    <input focus="true" placeholder-style="color:gray" placeholder="请输入姓名" maxlength="15" name="name" style='height:100rpx;line-height:100rpx;width:100%'/>
+  </view>
+  <button formType="submit" class="submit">确定修改</button>
+  <button bindtap='del' class="submit">删除球队</button>
+</form> 
+</block>

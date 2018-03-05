@@ -1,0 +1,30 @@
+<view class="search">
+  <form bindsubmit="formSubmit">
+    <view class="searcharea">
+      <view class="searchbox" hover="true" hover-class='hover'> 
+        <input placeholder-style="color:gray" placeholder="输入通信vs机械试试" maxlength="20" name="name" style="height: 85rpx;line-height: 85rpx"/>
+      </view>
+      <view class="btn" hover="true" hover-class='hover'>
+        <button formType="submit" class="submit" plain='true' style='border:none; border-left: 1rpx rgba(0, 0, 0,0.1) solid;border-radius:0' >→</button>
+      </view>
+    </view>
+  </form>
+  <view class="title">赛事信息搜索引擎</view>
+</view>
+
+<view class="resultlist">
+  <view class="resultnum">一共为你找到{{resultnum}}搜索结果</view>
+  <block wx:for="{{resultlist}}" wx:key="id">
+    <view class="result" wx:if="{{status==2}}" bindtap='searchresult' data-teama='{{item.teamA}}' data-teamb='{{item.teamB}}' data-status='{{status}}'>
+      <view class="teamA">{{item.teamA}}</view>
+      <view class="teamB">{{item.teamB}}</view>
+      <view class="vs">VS</view>
+    </view>
+    <view class="result" wx:if="{{status==1}}" bindtap='searchresult' data-teama='{{item.teamA}}' data-status='{{status}}' style='height:125rpx'>
+      <view class="teamA" style="line-height:125rpx;">{{item.teamA}}</view>
+    </view>
+    <view class="result" wx:if="{{status==0}}" style='height:250rpx'>
+      <view class="teamA" style="height:250rpx;line-height:250rpx;">换个关键字试试~</view>
+    </view>
+  </block>
+</view>

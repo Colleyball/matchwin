@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card" animation="{{dotAnData}}" style='transform: perspective(400px) rotateX({{deg}}deg)'>
+    <view class="teamA" animation="{{dotAnData2}}">点击抛硬币</view>
+    <view class="coin" bindtap="submit2"></view>
+    <view class="teamB" animation="{{dotAnData3}}">{{teamB}}</view>
+  </view>
+</view>
+
+<view class="list">
+  <view class="smallcard" style='transform: perspective(400px) rotateX({{drinkdeg}}deg)'>
+    <view class="title">今天喝{{drinkwhat}}</view>
+    <view class="smallcoindrink" bindtap="drink"></view>
+  </view>
+  <view class="smallcard" style='transform: perspective(400px) rotateX({{eatdeg}}deg)'>
+    <view class="title">今天吃{{eatwhat}}</view>
+    <view class="smallcoineat" bindtap="eat"></view>
+  </view>
+</view>

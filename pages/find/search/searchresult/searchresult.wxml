@@ -1,0 +1,61 @@
+<view class="top">
+  <view class="teamA">{{teamA}}</view>
+  <view class="fightinfo" wx:if="{{status == 2}}">
+    <view class="h2h">{{h2h[1]}}胜{{h2h[2]}}负</view>
+    <view class="teamB">{{teamB}}</view>
+  </view>
+  <view class="fightinfo" wx:if="{{status == 1}}">
+    <view class="oneh2h">{{h2h[1]}}胜{{h2h[2]}}负 胜率{{percent}}%</view>
+  </view>
+</view>
+<view class="coverbg" hidden="{{coverflag}}">
+  <view class="videotitle">{{videotitle}}</view>
+  <view class="tip">请复制视频地址，粘贴至浏览器后观看</view>
+  <view class="videoaddress"><text selectable='true'>{{videolink}}</text></view>
+  <view class="copy" bindtap='copy' data-videolink='{{videolink}}'>一键复制</view>
+</view>
+<view class="add" bindtap="closevideo" hidden="{{coverflag}}" style='background-color:orangered'>X</view>
+<toast hidden="{{toastflag}}" duration="1000" bindchange="toastHidden">复制成功</toast>
+<view class="resultlist">
+  <block wx:for="{{resultlist}}" wx:key="no">
+    <view class="result" wx:if="{{teamA==item.win}}">
+      <view class="matchinfo">
+        <view style="height:30rpx;line-height:30rpx">No.{{item.no}} {{item.name}} {{item.round}}</view>
+        <view style="height:30rpx;line-height:30rpx">比赛时间：{{item.date}} {{item.time}} 比赛场地：{{item.court}}</view>
+      </view>
+      <view class="title">{{item.teamA}}{{item.setA}}-{{item.setB}}{{item.teamB}}</view>
+      <view class="matchdetail">
+        <text wx:if="{{item.firstA!=null}}">{{item.firstA}}:{{item.firstB}}</text>
+        <text wx:if="{{item.firstA==null}}">比分信息缺失</text>
+        <text wx:if="{{item.secondA!=null}}"> {{item.secondA}}:{{item.secondB}}</text>
+        <text wx:if="{{item.tiredA!=null}}"> {{item.tiredA}}:{{item.tiredB}}</text>
+        <text wx:if="{{item.fourthA!=null}}"> {{item.fourthA}}:{{item.fourthB}}</text>
+        <text wx:if="{{item.fifthA!=null}}"> {{item.fifthA}}:{{item.fifthB}}</text>
+      </view>
+      <view class="ref" wx:if="{{item.Areferee!=''}}">
+        {{item.Areferee}} {{item.Breferee}} {{item.ARecorder}} {{item.BRecorder}}
+      </view>
+      <view class="video" wx:if="{{item.video}}" bindtap='video' data-videotitle='{{item.teamA}}{{item.setA}}-{{item.setB}}{{item.teamB}}' data-videolink='{{item.video}}'>点击观看本场比赛录像</view>  
+    </view>
+
+    <view class="result" wx:if="{{teamA!=item.win}}" style="box-shadow: 0rpx 5rpx 40rpx rgba(240, 27, 45,0.8);">
+      <view class="matchinfo">
+        <view style="height:30rpx;line-height:30rpx">No.{{item.no}} {{item.name}} {{item.round}}</view>
+        <view style="height:30rpx;line-height:30rpx">比赛时间：{{item.date}} {{item.time}} 比赛场地：{{item.court}}</view>
+      </view>
+      <view class="title">{{item.teamA}}{{item.setA}}-{{item.setB}}{{item.teamB}}</view>
+      <view class="matchdetail">
+        <text wx:if="{{item.firstA!=null}}">{{item.firstA}}:{{item.firstB}}</text>
+        <text wx:if="{{item.firstA==null}}">比分信息缺失</text>
+        <text wx:if="{{item.secondA!=null}}"> {{item.secondA}}:{{item.secondB}}</text>
+        <text wx:if="{{item.tiredA!=null}}"> {{item.tiredA}}:{{item.tiredB}}</text>
+        <text wx:if="{{item.fourthA!=null}}"> {{item.fourthA}}:{{item.fourthB}}</text>
+        <text wx:if="{{item.fifthA!=null}}"> {{item.fifthA}}:{{item.fifthB}}</text>
+      </view>
+      <view class="ref" wx:if="{{item.Areferee!=''}}">
+        裁判：{{item.Areferee}} {{item.Breferee}} {{item.ARecorder}} {{item.BRecorder}}
+      </view>
+      <view class="video" wx:if="{{item.video}}" bindtap='video' data-videotitle='{{item.teamA}}{{item.setA}}-{{item.setB}}{{item.teamB}}' data-videolink='{{item.video}}'>点击观看本场比赛录像</view>  
+    </view>
+  </block>
+</view>

@@ -1,0 +1,10 @@
+<view class="top">参赛队伍</view>
+<view class="teamlist">
+  <block wx:for="{{datalist}}" wx:key="{{id}}">
+  <view class="team" bindtap='detail' data-teamid='{{item.Teamid}}'>
+    <image class="teampic" src="{{item.Pic_x}}" mode='aspectFill'></image>
+    <view class="teamname">{{item.TeamName}}</view>
+    <view class="teamdetail">领队：{{item.TeamLeader}} —— 点击查看队员信息</view>
+  </view>
+  </block>
+</view>

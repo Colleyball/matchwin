@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Team/Team",
+    "pages/Match/Match",
+    "pages/User/User",
+    "pages/User/MyCard/MyCard",
+    "pages/User/MyLike/MyLike",
+    "pages/User/SignAll/SignAll",
+    "pages/MatchBox/MatchBox",
+    "pages/SportItems/SportItems",
+    "pages/Match/MatchDetails/MatchDetails",
+    "pages/Team/TeamDetails/TeamDetails",
+    "pages/Match/MatchDetails/SignupTeam/SignupTeam",
+    "pages/MatchBox/Tactical/Tactical",
+    "pages/find/find",
+    "pages/Team/CreateTeam/CreateTeam",
+    "pages/Team/MyTeam/MyTeam",
+    "pages/Team/jointeam/jointeam",
+    "pages/MatchBox/ScoreBoard/ScoreBoard",
+    "pages/find/search/search",
+    "pages/find/search/searchresult/searchresult",
+    "pages/find/winrank/winrank",
+    "pages/User/Setting/Setting",
+    "pages/Match/MatchDetails/jointeam/jointeam",
+    "pages/RefereeRecorder/RR-Home",
+    "pages/RefereeRecorder/Volleyball/RR-Volleyball",
+    "pages/RefereeRecorder/RR-Start/RR-Start",
+    "pages/RefereeRecorder/RR-Menu/RR-Menu",
+    "pages/RefereeRecorder/RR-Confirm/RR-Confirm",
+    "pages/RefereeRecorder/RR-Position/RR-Position",
+    "pages/RefereeRecorder/RR-Side/RR-Side",
+    "pages/Match/MatchDetails/schedule/schedule",
+    "pages/RefereeRecorder/application/application",
+    "pages/RefereeRecorder/RR-sub/RR-sub",
+    "pages/Match/MatchDetails/SignupTeam/chooseplayer/chooseplayer",
+    "pages/Match/MatchDetails/SignupTeam/editplayer/editplayer",
+    "pages/Team/TeamDetails/EditInfo/EditInfo",
+    "pages/Match/MatchDetails/jointeam/jointeamdetail/jointeamdetail",
+    "pages/RefereeRecorder/RR-Score/RR-Score",
+    "pages/Match/MatchDetails/schedule/live/live",
+    "pages/Match/MatchDetails/schedule/end/endmatch",
+    "pages/MatchBox/Coin/coin",
+    "pages/RefereeRecorder/RR-CreateMatch/RR-CreateMatch",
+    "pages/RefereeRecorder/RR-Confirm-P/RR-Confirm-P",
+    "pages/RefereeRecorder/RR-Menu-P/RR-Menu-P",
+    "pages/RefereeRecorder/RR-ChoosePlayer/RR-ChoosePlayer"
+  ],
+  "window": {
+    "navigationBarTitleText": "赛事窗 MatchWin.cn",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#777171",
+    "selectedColor": "#3369E8",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "images/home.png",
+        "iconPath": "images/home-act.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "images/find.png",
+        "iconPath": "images/find-act.png",
+        "pagePath": "pages/find/find",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "images/ref.png",
+        "iconPath": "images/ref-act.png",
+        "pagePath": "pages/RefereeRecorder/RR-Home",
+        "text": "数据统计"
+      },
+      {
+        "selectedIconPath": "images/user.png",
+        "iconPath": "images/user-act.png",
+        "pagePath": "pages/User/User",
+        "text": "我"
+      }
+    ]
+  }
+}

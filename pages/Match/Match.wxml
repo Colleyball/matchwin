@@ -1,0 +1,10 @@
+<view class="top">全部赛事</view>
+
+<block wx:for="{{datalist}}" wx:key="Matchid">
+  <view class="team" bindtap='matchdetails'>
+    <image class="teampic" src="{{item.Pic}}" mode='scaleToFill' data-matchid="{{item.Matchid}}" data-matchname="{{item.MatchName}}"></image>
+    <view class="teamname">{{item.MatchName}}</view>
+    <view class="teamdetail">{{item.StartTime}}至{{item.EndTime}} {{item.Position}}</view>
+  </view>
+</block>
+

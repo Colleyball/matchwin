@@ -1,0 +1,143 @@
+<view class="choosetypebg" hidden="{{coverflag}}"></view>
+<!--选择界面l-->
+<view class="choosetype" hidden="{{chooseflag}}">
+  <view class="content">
+    <view class="topleft" bindtap="showbasketball"></view>
+    <view class="topright"  bindtap="showvolleyball"></view>
+    <view class="bottomleft" bindtap="showfootball"></view>
+    <view class="bottomright" bindtap="showbadminton"></view>
+  </view>
+</view>
+<!--篮球卡片-->
+<view class="table" hidden="{{basketballflag}}">
+  <view class="title">填写个人资料</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="tablename">姓名</view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入你的姓名" maxlength="10" auto-focus="{{autofocus}}" name="name"/>
+    </view>
+    <view class="tablename">场上位置</view>
+    <view class="tip2">最多选择3项哦~</view>
+    <checkbox-group  class="choosesex" name="position">
+      <label>
+        <checkbox value="控球后卫" checked="">控球后卫</checkbox>
+        <checkbox value="得分后卫" checked="">得分后卫</checkbox>
+        <checkbox value="小前锋" checked="">小前锋</checkbox>
+        <checkbox value="大前锋" checked="">大前锋</checkbox>
+        <checkbox value="中锋" checked="">中锋</checkbox>
+      </label>
+    </checkbox-group>
+    <button formType="submit" class="submit" data-type="篮球">开始职业身涯</button>
+    <button bindtap="closecard" class="submit">返回</button>
+  </form>
+</view>
+<!--排球卡片-->
+<view class="table" hidden="{{volleyballflag}}">
+  <view class="title">填写个人资料</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="tablename">姓名</view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入你的姓名" maxlength="10" auto-focus="{{autofocus}}" name="name"/>
+    </view>
+    <view class="tablename">场上位置</view>
+    <view class="tip2">最多选择3项哦~</view>
+    <checkbox-group  class="choosesex" name="position">
+      <label>
+        <checkbox value="主攻" checked="">主攻</checkbox>
+        <checkbox value="二传" checked="">二传</checkbox>
+        <checkbox value="接应" checked="">接应</checkbox>
+        <checkbox value="副攻" checked="">副攻</checkbox>
+        <checkbox value="自由人" checked="">自由人</checkbox>
+      </label>
+    </checkbox-group>
+    <button formType="submit" class="submit" data-type="篮球">开始职业身涯</button>
+    <button bindtap="closecard" class="submit">返回</button>
+  </form>
+</view>
+<!--足球卡片-->
+<view class="table" hidden="{{footballflag}}">
+  <view class="title">填写个人资料</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="tablename">姓名</view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入你的姓名" maxlength="10" auto-focus="{{autofocus}}" name="name"/>
+    </view>
+    <view class="tablename">场上位置</view>
+    <view class="tip2">最多选择3项哦~</view>
+    <checkbox-group  class="choosesex" name="position">
+      <label>
+        <checkbox value="门将" checked="">门将</checkbox>
+        <checkbox value="边后卫" checked="">边后卫</checkbox>
+        <checkbox value="中后卫" checked="">中后卫</checkbox>
+        <checkbox value="后腰" checked="">后腰</checkbox>
+        <checkbox value="边前锋" checked="">边前锋</checkbox>
+        <checkbox value="前腰" checked="">前腰</checkbox>
+        <checkbox value="中锋" checked="">中锋</checkbox>
+        <checkbox value="影锋" checked="">影锋</checkbox>
+        <checkbox value="边锋" checked="">边锋</checkbox>
+      </label>
+    </checkbox-group>
+    <button formType="submit" class="submit"  data-type="足球">开始职业身涯</button>
+    <button bindtap="closecard" class="submit">返回</button>
+  </form>
+</view>
+<!--羽毛球卡片-->
+<view class="table" hidden="{{badmintonflag}}">
+  <view class="title">填写个人资料</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="tablename">姓名</view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入你的姓名" maxlength="10" auto-focus="{{autofocus}}" name="name"/>
+    </view>
+    <view class="tablename">场上位置</view>
+    <view class="tip2">最多选择3项哦~</view>
+    <checkbox-group  class="choosesex" name="position">
+      <label>
+        <checkbox value="单打" checked="">单打</checkbox>
+        <checkbox value="双打" checked="">双打</checkbox>
+        <checkbox value="混双" checked="">混双</checkbox>
+      </label>
+    </checkbox-group>
+    <button formType="submit" class="submit"  data-type="足球">开始职业身涯</button>
+    <button bindtap="closecard" class="submit">返回</button>
+  </form>
+</view>
+<toast hidden="{{toastflag}}" duration="1000" bindchange="toastHidden">创建成功</toast>
+<view class="Card" bindtap="" wx:for="{{datalist}}" wx:key="id">
+  <view  class="cardname">{{item.nickName}}</view>
+  <view  class="sports">{{item.SportsItems}}</view>
+  <view  class="tip">点击查看个人数据</view>
+  <view class="position">
+  <view  class="position1">{{item.position1}}</view>
+  <view  class="position2">{{item.position2}}</view>
+  <view  class="position3">{{item.position3}}</view>
+  </view>
+</view>
+
+<view class="choosetypebg"  hidden="{{setschool}}">
+  <view class="chooseschool">
+    <text class="choosetitle">欢迎来到联赛圈，请完善个人资料</text>
+    <form bindsubmit="personalinfo">
+      <picker bindchange="bindareaChange" value="{{area_index}}" range="{{area}}">
+        <view class="pickarea">{{area[area_index]}}</view>
+      </picker>
+      <picker value="{{achool_index}}" range="{{school}}" bindchange="bindschoolChange">
+        <view class="pickarea">{{school[school_index]}}</view>
+      </picker>
+      <view class="tablename">身高(cm)</view>
+      <view class="body-view">
+        <slider min="150" max="200" show-value="true" value="178" name="height"/>
+      </view>
+      <view class="tablename">体重(kg)</view>
+      <view class="body-view">
+        <slider min="40" max="100" show-value="true" value="55" name="weight"/>
+      </view>
+      <view class="btn-area">
+        <button formType="submit" class="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>
+<view class="add" bindtap="openchoose" hidden="{{chooseBtn}}">十</view>
+<view class="add" bindtap="closechoose" hidden="{{!chooseBtn}}" style='background-color:orangered'>X</view>
+

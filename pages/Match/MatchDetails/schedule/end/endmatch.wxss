@@ -1,0 +1,212 @@
+.title{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #0FB6ED;
+  text-align: center;
+  height: 80rpx;
+  font-size: 30rpx
+}
+
+.teamnameA{
+  width: 45%;
+  margin-left: 2.5%;
+  border-radius: 10rpx;
+  background-color: whitesmoke;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2)
+}
+
+.teamnameB{
+  width: 45%;
+  margin-left: 5%;
+  border-radius: 10rpx;
+  background-color: whitesmoke;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2)
+}
+
+.matchinfo{
+  position: relative;
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  margin: 15rpx 0 0 0;
+  border: 0;
+  padding: 0;
+}
+
+.Score{
+  margin-top: 0rpx;
+  height:80rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+}
+
+.match{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 20%;
+  font-size: 50rpx;
+}
+
+.set{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 16%;
+  font-size: 30rpx;
+}
+
+.Scoretip{
+  margin-top: 5rpx;
+  height: 50rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+}
+
+.matchtip{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 20%;
+  font-size: 25rpx;
+}
+
+.settip{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 16%;
+  font-size: 25rpx;
+}
+
+
+.cover{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(255,255,255,0.95);
+  overflow: hidden;
+  z-index: 9998;
+}
+
+.livetitle{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #0FB6ED;
+  text-align: center;
+  height: 80rpx;
+  line-height:80rpx;
+  font-size: 40rpx
+}
+
+.livetitleA{
+  width: 95%;
+  margin-left: 2.5%;
+  border-radius: 10rpx;
+  background-color: whitesmoke;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 10rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2)
+}
+
+.live {
+height: 700rpx;
+width: 750rpx;
+margin-top: 20rpx;
+}
+
+.ascore{
+  background: whitesmoke;
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.bscore{
+  background: ghostwhite;
+  width: 750rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.livetip{
+  background: gainsboro;
+  margin-left: 35rpx;
+  border-radius: 20rpx;
+  width: 680rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+.player{
+  display: flex;
+  width:680rpx;
+  height:100rpx;
+  margin-left: 35rpx;
+  line-height: 100rpx;
+  flex-direction: row;
+  background-color: whitesmoke;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 0, 0, 0.2);
+}
+
+.playernum{
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  background-color: rgba(94, 213, 209, 0.8)
+}
+
+.palyerinfo{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 450rpx;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+
+.name{
+  position: relative;
+  width: 450rpx;
+  height: 60rpx;
+  margin: 0rpx;
+  line-height: 60rpx;
+}
+
+.detail{
+  position: relative;
+  width: 450rpx;
+  height: 40rpx;
+  margin: 0rpx;
+  line-height: 40rpx;
+  font-size:25rpx;
+  color: rgba(0, 0, 0, 0.5)
+}
+

@@ -1,0 +1,42 @@
+<!--page/one/index.wxml-->
+<view class="page">
+  <view class="team">
+    <image class="teampic" src="{{datalist[0].Pic}}" mode='scaleToFill'></image>
+    <view class="like" catchtap="signup" >十</view>
+    <view class="teamname">{{datalist[0].MatchName}}</view>
+    <view class="teamdetail">{{datalist[0].StartTime}}至{{datalist[0].EndTime}} {{datalist[0].Position}}</view>
+  </view>
+  <view class="card" bindtap='schedule'>
+    <image class="pic" mode="scaletofill" src='https://volleywang.cn/liansaiquan/images/wechat/match/schedule.png'></image>
+    <view class="title">赛事直播</view>
+  </view>
+
+  <view class="card" bindtap='jointeam'>
+    <image class="pic" src='https://volleywang.cn/liansaiquan/images/wechat/match/team.png'></image>
+    <view class="title">参赛队伍</view>
+  </view>
+
+  <view class="card" bindtap=''>
+    <image class="pic" src='https://volleywang.cn/liansaiquan/images/wechat/match/rank.png'></image>
+    <view class="title">积分排名</view>
+  </view>
+
+  <view class="card">
+    <image class="pic" src='https://volleywang.cn/liansaiquan/images/wechat/match/media.png'></image>
+    <view class="title">媒体中心</view>
+  </view>
+</view>
+
+    <action-sheet hidden="{{actionSheetHidden}}">
+        <block wx:if="{{datalist[0].Type==1}}">
+        <action-sheet-item bindtap="signupone" >个人报名</action-sheet-item>
+        <action-sheet-item bindtap="signupteam">团队报名</action-sheet-item>
+        </block>
+        <block wx:if="{{datalist[0].Type==2}}">
+        <action-sheet-item bindtap="signupone" >个人报名</action-sheet-item>
+        </block>
+        <block wx:if="{{datalist[0].Type==3}}">
+        <action-sheet-item bindtap="signupteam">团队报名/管理球队</action-sheet-item>
+        </block>
+        <action-sheet-cancel bindtap="cancel">取消</action-sheet-cancel>
+    </action-sheet>

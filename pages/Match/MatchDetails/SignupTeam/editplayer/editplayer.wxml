@@ -1,0 +1,10 @@
+<view class="top">编辑队员信息</view>
+<view class="playername">{{name}}</view>
+<form bindsubmit="formSubmit">
+  <view class="tablename">修改队员号码</view>
+  <view class="inputView">
+    <input type="digit" focus="true" placeholder-style="color:gray" placeholder="请输入队员号码" maxlength="3" name="num" style='height:100rpx;line-height:100rpx;width:100%'/>
+  </view>
+  <button formType="submit" class="submit">确定修改</button>
+  <button bindtap='del' class="submit">删除队员</button>
+</form> 

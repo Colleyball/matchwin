@@ -1,0 +1,58 @@
+<view class="cover" hidden="{{share}}"></view>
+<view class="share-team" hidden="{{share}}">
+  <image src="{{teaminfo[0].Pic_x}}" class="share-teamPic" mode="aspectFill" bindtap=""></image>
+  <view class="share-teamName">{{teaminfo[0].TeamName}}</view>
+</view>
+<view class="share-join" hidden="{{share}}" bindtap='join'>立即加入</view>
+<view class="share-close" bindtap="close" hidden="{{share}}">关闭</view>
+<view class="Top">{{teaminfo[0].TeamName}}</view>
+<view class="team">
+    <image src="{{teaminfo[0].Pic_x}}" class="teamPic" mode="aspectFill" bindtap=""></image>
+    <view class="teaminfo">
+    <view class="teaminfotitle"> 
+      <view class="detail">队长</view>
+      <view class="detail">活跃度</view>
+      <view class="detail">粉丝</view>
+      <view class="detail">胜率</view>
+    </view>
+    <view class="teaminfodetail">
+      <view class="detail1">{{teaminfo[0].TeamLeader}}</view>
+      <view class="detail1">{{teaminfo[0].Activity}}</view>
+      <view class="detail1">{{fans}}</view>
+      <view class="detail1"></view>
+    </view>
+  </view>
+</view>
+
+<block wx:if="{{teaminfo[0].Uid == 0 || !teaminfo[0].Uid}}">
+<view class="control" bindtap='manage'>认领球队</view>
+</block>
+
+<block wx:if="{{teaminfo[0].Uid == Uid}}">
+<view class="title" >
+  <view class="titlename">球队管理</view>
+</view>
+<view class="control" bindtap='editteamname' data-name='{{teaminfo[0].TeamName}}' data-teamid='{{teaminfo[0].Teamid}}'>球队更名</view>
+<view class="control" bindtap='delteam'>删除球队</view>
+</block>
+
+<view class="title">
+    <view class="titlename">队员列表</view>
+  </view>
+<view class="player" wx:for="{{playerlist}}" wx:key="id">
+  <image src="{{item.Pic}}" class="userpic"></image>
+  <view class="playerinfo">
+    <view class="name">{{item.nickName}}</view>
+    <view class="position">
+      <view wx:if="{{item.position1 != null}}">{{item.position1}}</view>
+      <view wx:if="{{item.position2 != null}}">{{item.position2}}</view>
+      <view wx:if="{{item.position3 != null}}">{{item.position3}}</view>
+    </view>
+  </view>
+  <view wx:if="{{teaminfo[0].Uid == Uid || item.Uid == Uid}}" class="edit" bindtap='edit' data-name='{{item.nickName}}' data-cardid='{{item.Cardid}}'>✎</view>
+</view>
+
+
+
+<view wx:if="{{joinflag==1}}" class="add" bindtap="" hidden="{{!share}}" style='background-color:orangered'>✔</view>
+<view wx:elif="{{joinflag==0}}" class="add" bindtap="jointeam" hidden="{{!share}}">十</view>

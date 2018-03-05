@@ -1,0 +1,62 @@
+<view class="container">
+  <view class="title">
+    请选择所有的参赛队员
+  </view>
+  <view class="topbar">
+    <view class="teamA" bindtap='teamA' style='width: {{Awidth}}%;background-color: rgba(255, 255, 255,{{Acolor}});border-bottom-right-radius:{{Aradius}}rpx;border-top-right-radius:{{Aradius}}rpx;font-size:{{Afont}}rpx'>{{macthData.TeamAName}}
+    </view>
+    <view class="teamB" bindtap='teamB' style='width: {{Bwidth}}%;background-color: rgba(255, 255, 255,{{Bcolor}});border-bottom-left-radius:{{Bradius}}rpx;border-top-left-radius:{{Bradius}}rpx;font-size:{{Bfont}}rpx'>{{macthData.TeamBName}}
+    </view>
+  </view>
+  <view class="palyerlist" hidden='{{!Switchteam}}'>
+  <form bindsubmit='SubmitTeamA'>
+    <checkbox-group name="cardid">
+      <block wx:for="{{playerlist1}}" wx:key="id" >
+      <view class="player">
+        <view style='margin-left:15rpx'/>
+        <checkbox value="{{item.Cardid}}" checked="{{item.checked}}" class="checkbox"/>
+          <image src="{{item.Pic}}" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{item.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{item.position1 != null}}">{{item.position1}}</view>
+              <view wx:if="{{item.position2 != null}}">{{item.position2}}</view>
+              <view wx:if="{{item.position3 != null}}">{{item.position3}}</view>
+            </view>
+          </view>
+          <view class="playernum">
+            <input placeholder-style="color:gray" placeholder="号码" maxlength="3" name="card{{item.Cardid}}" style='height:80rpx;line-height:80rpx;width:100%;font-size:30rpx;text-align:center'/>
+          </view>
+      </view>
+      </block>
+    </checkbox-group>
+    <button class="submit" formType="submit">确认</button>
+  </form>
+  </view>
+
+  <view class="palyerlist" hidden='{{Switchteam}}'>
+  <form bindsubmit='SubmitTeamB'>
+    <checkbox-group name="cardid">
+      <block wx:for="{{playerlist2}}" wx:key="id" >
+      <view class="player">
+        <view style='margin-left:15rpx'/>
+        <checkbox value="{{item.Cardid}}" checked="{{item.checked}}" class="checkbox"/>
+          <image src="{{item.Pic}}" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{item.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{item.position1 != null}}">{{item.position1}}</view>
+              <view wx:if="{{item.position2 != null}}">{{item.position2}}</view>
+              <view wx:if="{{item.position3 != null}}">{{item.position3}}</view>
+            </view>
+          </view>
+          <view class="playernum">
+            <input placeholder-style="color:gray" placeholder="号码" maxlength="3" name="{{item.Cardid}}" style='height:80rpx;line-height:80rpx;width:100%;font-size:30rpx;text-align:center'/>
+          </view>
+      </view>
+      </block>
+    </checkbox-group>
+    <button class="submit" formType="submit">继续</button>
+  </form>
+  </view>
+</view>

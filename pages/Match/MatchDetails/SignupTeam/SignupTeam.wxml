@@ -1,0 +1,40 @@
+<view class="Top">{{title}}</view>
+<view class="cover" hidden="{{toolflag}}"></view>
+
+<block wx:if="{{datalist==0}}">
+  <view class="tip" style="margin-top:150rpx;">只有球队的创建者可以报名参赛</view>
+  <view class="tip">快去创建或认领球队吧</view>
+  <view class="gototeam" bindtap='gototeam'>球队列表</view>
+</block>
+
+<block  wx:if="{{joinstatus != 0}}">
+  <block wx:for="{{playerlist}}" wx:key="id" wx:for-item="j">
+      <view class="player">
+        <view wx:if="{{j.Num}}" class="userpic">{{j.Num}}</view>
+        <image wx:else src="https://volleywang.cn/liansaiquan/images/wechat/team/logo.jpg" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{j.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{j.position1 != null}}">{{j.position1}}</view>
+              <view wx:if="{{j.position2 != null}}">{{j.position2}}</view>
+              <view wx:if="{{j.position3 != null}}">{{j.position3}}</view>
+            </view>
+          </view>
+          <view class="edit" bindtap='edit' data-name='{{j.nickName}}' data-cardid='{{j.Cardid}}'>✎</view>
+      </view>
+    </block>
+</block>
+
+<block wx:if="{{!joinstatus && datalist != 0}}">
+  <view class="teamlist">
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team">
+      <image class="teampic" src="{{item.Pic_x}}" mode='scaleToFill' bindtap="bindViewTapTeam" data-teamid="{{item.Teamid}}" data-fans='{{item.teamfans}}'></image>
+      <view class="like" catchtap="join" data-teamid="{{item.Teamid}}">报名参赛</view>
+      <view class="teamname">{{item.TeamName}}</view>
+      <view class="teamdetail">队长：{{item.TeamLeader}}</view>
+    </view>
+  </block>
+  </view>
+</block>
+

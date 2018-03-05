@@ -1,0 +1,104 @@
+<view class="cover" hidden="{{toolflag}}"></view>
+
+<view class='title'>
+  <view class="teamnameA">{{matchinfo.TeamAName}}</view>
+  <view class="teamnameB">{{matchinfo.TeamBName}}</view>
+</view>
+<view class="livetitle">
+  <view class="livetitleA">全场比分
+  </view>
+</view>
+<view class='Scoretip'>
+  <view class="matchtip">总比分</view>
+  <view class="settip">第一局</view>
+  <view class="settip">第二局</view>
+  <view class="settip">第三局</view>
+  <view class="settip">第四局</view>
+  <view class="settip">第五局</view>
+</view>
+<view class='Score'>
+  <view class="match">{{lastmatchinfo[0].MatchA}}-{{lastmatchinfo[0].MatchB}}</view>
+  <view class="set">{{lastmatchinfo[0].Set1A}}-{{lastmatchinfo[0].Set1B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set2A}}-{{lastmatchinfo[0].Set2B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set3A}}-{{lastmatchinfo[0].Set3B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set4A}}-{{lastmatchinfo[0].Set4B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set5A}}-{{lastmatchinfo[0].Set5B}}</view>
+</view>
+
+<view class="livetitle">
+  <view class="livetitleA">技术统计
+  </view>
+</view>
+
+<view class="table">
+  <view class="livetitle" style='background-color:#8f1d78'>
+    <view class="livetitleA" style='font-size:30rpx'>{{matchinfo.TeamAName}}</view>
+  </view>
+  <block wx:for="{{statistic}}" wx:key="no">
+    <block wx:if="{{item.Teamid == matchinfo.TeamAid}}">
+      <view class="player">
+        <view class="playernum">{{item.Num}}</view>
+        <view class="palyerinfo">
+          <view class="name">{{item.Name}}</view>
+          <view class="detail">发球：{{item.server}} 进攻：{{item.spike}} 拦网：{{item.block}} 失误：{{item.fault}} </view>
+        </view>
+      </view>
+    </block>
+  </block>
+  <view class="livetitle" style='background-color:#8f1d78'>
+    <view class="livetitleA" style='font-size:30rpx'>{{matchinfo.TeamBName}}</view>
+  </view>
+  <block wx:for="{{statistic}}" wx:key="no">
+    <block wx:if="{{item.Teamid == matchinfo.TeamBid}}">
+      <view class="player">
+        <view class="playernum">{{item.Num}}</view>
+        <view class="palyerinfo">
+          <view class="name">{{item.Name}}</view>
+          <view class="detail">发球：{{item.server}} 进攻：{{item.spike}} 拦网：{{item.block}} 失误：{{item.fault}} </view>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<view class="livetitle">
+  <view class="livetitleA">赛事回顾
+  </view>
+</view>
+<view class="live">
+  <scroll-view scroll-y="true" class="live">
+    <block wx:for="{{allmatch}}" wx:key='no'>
+    <view class="livetip">
+       {{matchinfo.TeamAName}}【{{item.MatchA}}:{{item.MatchB}} {{item.currentscoreA}}:{{item.currentscoreB}}】{{matchinfo.TeamBName}}
+    </view>
+    <view wx:if="{{item.team == 'A'}}" class="ascore">
+      <block wx:if="{{item.Means == 'spike'}}">
+        {{matchinfo.TeamAName}}:{{item.scoreName}}进攻得分
+      </block>
+      <block wx:if="{{item.Means == 'block'}}">
+        {{matchinfo.TeamAName}}:{{item.scoreName}}拦网得分
+      </block>
+      <block wx:if="{{item.Means == 'server'}}">
+        {{matchinfo.TeamAName}}:{{item.scoreName}}发球得分
+      </block>
+      <block wx:if="{{item.Means == 'fault'}}">
+        {{matchinfo.TeamAName}}:{{item.scoreName}}失误送分
+      </block>
+    </view>
+    <view wx:if="{{item.team == 'B'}}" class="bscore">
+      <block wx:if="{{item.Means == 'spike'}}">
+        {{matchinfo.TeamBName}}:{{item.scoreName}}进攻得分
+      </block>
+      <block wx:if="{{item.Means == 'block'}}">
+        {{matchinfo.TeamBName}}:{{item.scoreName}}拦网得分
+      </block>
+      <block wx:if="{{item.Means == 'server'}}">
+        {{matchinfo.TeamBName}}:{{item.scoreName}}发球得分
+      </block>
+      <block wx:if="{{item.Means == 'fault'}}">
+        {{matchinfo.TeamBName}}:{{item.scoreName}}失误送分
+      </block>
+    </view>
+    </block>
+  </scroll-view>
+</view>

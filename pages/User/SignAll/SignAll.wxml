@@ -1,0 +1,14 @@
+<view class="Top">
+  <image src="{{sign}}" class="userpic"></image>
+  <view class="title">一键签到</view>
+</view>
+
+<view class="team" bindtap="bindViewTapTeam" wx:for="{{datalist}}">
+  <view class="name">{{item.Name}}</view>
+  <view class="teaminfo">
+    <view class="activity">经验：{{item.expe}}    活跃度：{{item.activity}}</view>
+  </view>
+  <view wx:if="{{item.sign==0}}" class="sign" catchtap="sign">签到</view>
+  <view wx:elif="{{item.sign==1}}" class="sign" catchtap="hassign">已签到</view>
+</view>
+  

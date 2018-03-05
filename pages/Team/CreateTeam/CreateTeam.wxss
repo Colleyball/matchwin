@@ -1,0 +1,95 @@
+page,.page {
+  font-family: 'PingFang SC', 'Helvetica Neue' ,Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+
+.Top{
+    height: 150rpx;
+    background-image: url("http://123.206.177.183/liansaiquan/images/mylike/mylike.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 150rpx;
+    color: white;
+    font-size: 60rpx;
+    margin-bottom: 20rpx;
+    width: 100%;
+}
+
+.CreateTeam{
+  width: 100%;
+  height: 100%;
+  margin-left: 0rpx;
+  background-color: #fff;
+  margin-top:0rpx;
+  text-align: center;
+  padding: 0rpx;
+  padding-top: 30rpx;
+}
+
+.chooseimage{
+  width: 600rpx;
+  height: 360rpx;
+  border: 2rpx solid blueviolet;
+  border-radius: 30rpx; 
+  margin-left: 75rpx;
+  margin-bottom: 30rpx;
+  background-image: url(https://volleywang.cn/liansaiquan/images/team/uploadimg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.inputView{
+ border: 2rpx solid red;
+ border-radius: 40rpx;
+ width: 700rpx;
+ margin-left: 25rpx;
+ height: 60rpx;
+ line-height: 60rpx;
+ margin-top: 15rpx;
+ margin-bottom: 30rpx;
+ font-size: 30rpx;
+}
+
+.choosetitle{
+}
+
+.pick{
+  display: flex;
+  flex-direction: row;
+  width: 700rpx;
+  margin-left: 25rpx;
+   margin-bottom: 30rpx;
+}
+
+.pickarea{
+ border: 2rpx solid red;
+ border-radius: 40rpx;
+ width: 300rpx;
+ margin-top: 15rpx;
+ font-size: 30rpx;
+ height: 60rpx;
+ line-height: 60rpx;
+ margin-left: 20rpx;
+ margin-right: 40rpx;
+}
+
+.pickschool{
+ border: 2rpx solid red;
+ border-radius: 40rpx;
+ width: 300rpx;
+ margin-top: 15rpx;
+ font-size: 30rpx;
+ height: 60rpx;
+ line-height: 60rpx;
+}
+
+.submit{
+  border: 2rpx solid red;
+ border-radius: 10rpx;
+ margin-top: 50rpx;
+ width: 700rpx;
+ margin-left: 25rpx;
+ margin-bottom: 30rpx;
+ height: 80rpx;
+ line-height: 80rpx;
+}/* CreateTeam.wxss */

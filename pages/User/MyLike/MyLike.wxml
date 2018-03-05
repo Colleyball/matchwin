@@ -1,0 +1,15 @@
+<view class="top">我的关注</view>
+
+<view class="teamlist">
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team">
+      <image class="teampic" src="{{item.Pic}}" mode='scaleToFill' bindtap="bindViewTapTeam" data-teamid="{{item.id}}"></image>
+      <view wx:if="{{item.sign==0}}" class="like" catchtap="sign" data-teamid="{{item.id}}">✎</view>
+      <view wx:elif="{{item.sign==1}}" class="like" catchtap="hassign" data-teamid="{{item.id}}">✔</view>
+      <view class="teamname">{{item.Name}}</view>
+      <view class="teamdetail">队长：{{item.Leader}} 活跃度：{{item.activity}}</view>
+    </view>
+  </block>
+</view>
+
+<toast hidden="{{hiddenToast}}" duration="1000" bindchange="toastHidden" >签到成功！</toast>

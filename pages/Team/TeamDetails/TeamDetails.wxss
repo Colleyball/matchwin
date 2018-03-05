@@ -1,0 +1,248 @@
+page,.page {
+  font-family: 'PingFang SC', 'Helvetica Neue' ,Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+}
+
+.cover{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(255,255,255,0.95);
+  overflow: hidden;
+}
+
+.control{
+  font-size: 40rpx;
+  width:680rpx;
+  height:100rpx;
+  margin-left: 35rpx;
+  line-height: 100rpx;
+  background-color: whitesmoke;
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.share-team{
+  position: fixed;
+  width: 600rpx;
+  height:460rpx;
+  background-color: white;
+  padding: 0;
+  top:200rpx;
+  left: 75rpx;
+  border-radius: 40rpx;
+  box-shadow: 0rpx 10rpx 20rpx black
+}
+
+.share-teamPic{
+  width: 600rpx;
+  height: 360rpx;
+  margin:0;
+  border-top-left-radius: 40rpx;
+  border-top-right-radius: 40rpx;
+}
+
+.share-teamName{
+  width: 600rpx;
+  height: 100rpx;
+  border-bottom-left-radius: 40rpx;
+  border-bottom-right-radius: 40rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.share-join{
+  position: fixed;
+  width:500rpx;
+  height: 100rpx;
+  background-color: #f17c67;
+  line-height: 100rpx;
+  text-align: center;
+  left: 125rpx;
+  top:720rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 10rpx 20rpx black
+}
+
+.share-close{
+  position: fixed;
+  width:500rpx;
+  height: 100rpx;
+  background-color: #DDF0E0;
+  line-height: 100rpx;
+  text-align: center;
+  left: 125rpx;
+  top:850rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 10rpx 20rpx black
+}
+
+.Top{
+    height: 150rpx;
+    background-image: url("http://www.volleywang.cn/liansaiquan/images/mylike/mylike.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 150rpx;
+    color: white;
+    font-size: 60rpx;
+    margin-bottom: 0rpx;
+    width: 100%;
+}
+
+.team {
+  display: flex;
+  flex-direction:column;
+  width: 750rpx;
+  margin-bottom: 20rpx;
+  padding: 0;
+}
+
+.teamPic {
+  width: 750rpx;
+  height: 450rpx;
+  margin:0;
+  border-top-left-radius: 0rpx;
+  border-bottom-left-radius: 0rpx;
+}
+
+.teaminfo{
+  display: flex;
+  flex-direction: column;
+  width: 750rpx;
+  height: 100rpx;
+  margin-top: -100rpx;
+  background:linear-gradient(to top, rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0)100%);
+}
+
+.teaminfotitle{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 50rpx;
+  text-align: center;
+  padding: 0;
+}
+
+.teaminfodetail{
+  display: flex;
+  flex-direction: row;
+  width: 750rpx;
+  height: 50rpx;
+  text-align: center;
+  padding: 0;
+  margin-top: 0rpx;
+}
+
+.detail{
+  font-size: 25rpx;
+  text-align: center;
+  margin-left: 0rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 187.5rpx;
+  color: white;
+}
+
+.detail1{
+  color: white;
+  font-size: 35rpx;
+  text-align: center;
+  margin-left: 0rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  width: 187.5rpx;
+
+}
+
+.player{
+  width: 680rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  margin-left: 35rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0,0.3);
+}
+
+.userpic{
+  height: 80rpx;
+  width: 80rpx;
+  font-size: 60rpx;
+  line-height: 80rpx;
+  text-align:center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.edit{
+  height: 80rpx;
+  width: 80rpx;
+  font-size: 60rpx;
+  line-height: 80rpx;
+  text-align:center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.playerinfo{
+  height: 100rpx;
+  width: 470rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.name{
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid blueviolet;
+}
+
+.position{
+  font-size: 25rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  flex-direction: row
+}
+.title{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx red solid;
+}
+
+.titlename{
+  height: 60rpx;
+  line-height: 60rpx;
+  color: black;
+  width: 200rpx;
+  text-align: center;
+}
+
+.add{
+ line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: white;
+  position: fixed;
+  bottom: 15rpx;
+  right: 325rpx;
+  background-color: blueviolet;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 75rpx;
+  box-shadow: 0px 0px  50px rgba(0, 0, 0, 0.6);
+}

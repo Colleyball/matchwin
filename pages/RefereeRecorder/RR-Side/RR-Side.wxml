@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card" animation="{{dotAnData}}">
+    <view class="teamA" animation="{{dotAnData2}}">{{teamA}}</view>
+    <view class="coin" bindtap="submit"></view>
+    <view class="teamB" animation="{{dotAnData3}}">{{teamB}}</view>
+  </view>
+</view>
+
+<view class="cover" hidden="{{toolflag}}"></view>
+<form bindsubmit="formSubmit" hidden="{{toolflag}}">
+  <view class='title'>选择场地</view>
+  <view class="court">
+    <radio-group class="left" name="position">
+      <radio value="0" checked="false" />{{teamA}}
+      <radio value="1" checked="ture" />{{teamB}}
+    </radio-group>
+    <view class="right">
+    </view>
+  </view>
+  <view class='title2'>选择发球</view>
+  <view class="server">
+    <radio-group name="server" class='chooseserver'>
+      <radio value="0" checked="false" class="item">{{teamA}}</radio>
+      <radio value="1" checked="ture" class="item">{{teamB}}</radio>
+    </radio-group>
+  </view>
+  <button formType="submit" class="submit2">确定</button>
+</form>

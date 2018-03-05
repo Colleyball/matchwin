@@ -1,0 +1,51 @@
+<view class="topbar">
+  <view class="item" style='font-size:{{Afont}};color:{{colora}};border-bottom:1rpx solid {{colora}}' bindtap='now'>正在进行</view>
+  <view class="item" style='font-size:{{Bfont}};color:{{colorb}};border-bottom:1rpx solid {{colorb}}' bindtap='end'>已结束</view>
+  <view class="item" style='font-size:{{Cfont}};color:{{colorc}};border-bottom:1rpx solid {{colorc}}' bindtap='wait'>未进行</view>
+</view>
+<view class="cover" hidden="{{toolflag}}"></view>
+
+<view class="resultlist" hidden="{{schedule}}">
+  <block wx:for="{{schedulelist}}" wx:key="id">
+    <view class="result" wx:if="{{item.Status==0}}">
+      <view class="teamA">{{item.TeamAName}}</view>
+      <view class="teamB">{{item.TeamBName}}</view>
+      <view class="vs">{{item.Date}} {{item.Time}} {{item.Court}} {{item.Round}}</view>
+    </view>
+  </block>
+  <view class="result">
+    <view class="teamA">未进行的比赛</view>
+    <view class="teamB">赛事窗</view>
+    <view class="vs">没有更多结果啦~去其他地方看看吧</view>
+  </view>
+</view>
+
+<view class="resultlist" hidden="{{live}}">
+  <block wx:for="{{schedulelist}}" wx:key="id">
+    <view class="result" wx:if="{{item.Status==2}}" data-all='{{item}}' bindtap='live'>
+      <view class="teamA">{{item.TeamAName}}</view>
+      <view class="teamB">{{item.TeamBName}}</view>
+      <view class="vs" style='background-color:#f17c67'>正在进行中 点击观看直播</view>
+    </view>
+  </block>
+  <view class="result">
+    <view class="teamA">正在进行的比赛</view>
+    <view class="teamB">赛事窗</view>
+    <view class="vs">没有更多结果啦~去其他地方看看吧</view>
+  </view>
+</view>
+
+<view class="resultlist" hidden="{{finish}}">
+  <block wx:for="{{schedulelist}}" wx:key="id">
+    <view class="result" wx:if="{{item.Status==1}}" data-all='{{item}}' bindtap='endmatch' >
+      <view class="teamA">{{item.TeamAName}}</view>
+      <view class="teamB">{{item.TeamBName}}</view>
+      <view class="vs" style='background-color:#373e40'>{{item.Date}} {{item.Round}} 查看结果</view>
+    </view>
+  </block>
+  <view class="result">
+    <view class="teamA">已结束的比赛</view>
+    <view class="teamB">赛事窗</view>
+    <view class="vs">没有更多结果啦~去其他地方看看吧</view>
+  </view>
+</view>

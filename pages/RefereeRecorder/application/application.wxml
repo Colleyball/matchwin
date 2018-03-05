@@ -1,0 +1,15 @@
+<view class="container">
+  <form bindsubmit='formsubmit'>
+    <view class="tablename">姓名
+    </view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入姓名" maxlength="10"name="name" style='height:100rpx;line-height:100rpx;width:100%'/>
+    </view>
+    <view class="tablename">学号
+    </view>
+    <view class="inputView">
+      <input placeholder-style="color:gray" placeholder="请输入学号" maxlength="10"name="schoolid" style='height:100rpx;line-height:100rpx;width:100%'/>
+    </view>
+    <button class="submit" formType="submit">确认</button>
+  </form>
+</view>

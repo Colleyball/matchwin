@@ -1,0 +1,33 @@
+<view class="Top">创建我的球队</view>
+<view class="CreateTeam">
+  <view class="chooseimage" bindtap="uploadPhoto">
+   <image mode="aspectFill"  data-src="{{tempFilePaths[0]}}" style="margin:0;padding:0;width:600rpx;height:360rpx;border-radius: 28rpx;" src="{{tempFilePaths[0]}}">
+   </image>
+</view>
+  <form bindsubmit="TeamSubmit">
+  <view class="tablename">球队/俱乐部名称</view>
+    <view class="inputView" >
+      <input placeholder-style="color:black" placeholder="请输入……" maxlength="10" name="name"/>
+    </view>
+    <view class="tablename">队长/负责人姓名</view>
+    <view class="inputView" >
+     <input placeholder-style="color:black" placeholder="请输入……" maxlength="10" name="leader"/>
+    </view>
+    <view class="tablename">球队/俱乐部所在地</view>
+    <view class="pick">
+  <picker bindchange="bindareaChange" value="{{area_index}}" range="{{area}}">
+    <view class="pickarea">
+    {{area[area_index]}}
+    </view>
+  </picker>
+   <picker value="{{achool_index}}" range="{{school}}" bindchange="bindschoolChange">
+    <view class="pickarea">
+     {{school[school_index]}}
+    </view>
+  </picker>
+  </view>
+    <view class="btn-area">
+      <button formType="submit" class="submit">确认</button>
+    </view>
+  </form>
+</view>

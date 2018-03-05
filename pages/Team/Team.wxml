@@ -1,0 +1,23 @@
+<view class="cover" hidden="{{toolflag}}" animation="{{animation2}}">
+</view>
+<view class="top">战队列表</view>
+<view class="teamlist">
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team">
+      <image class="teampic" src="{{item.Pic_x}}" mode='scaleToFill' bindtap="bindViewTapTeam" data-teamid="{{item.Teamid}}" data-fans='{{item.teamfans}}'></image>
+      <view wx:if="{{item.userlike==0}}" class="like" catchtap="like" data-teamid="{{item.Teamid}}">十</view>
+      <view wx:elif="{{item.usersign==0}}" class="like" catchtap="sign" data-teamid="{{item.Teamid}}">✎</view>
+      <view wx:else class="like" catchtap="hassign" data-teamid="{{item.Teamid}}">✔</view>
+      <view class="teamname">{{item.TeamName}}</view>
+      <view class="teamdetail">队长：{{item.TeamLeader}} 活跃度：{{item.Activity}} 粉丝：{{item.teamfans}}</view>
+    </view>
+  </block>
+</view>
+<toast hidden="{{hiddenToast}}" duration="1500" bindchange="toastHidden" >签到成功！队伍活跃度+1 经验+8</toast>
+<view class="add" bindtap="opentool" hidden="{{!toolflag}}">十</view>
+<view class="tool" hidden="{{toolflag}}">
+  <view class="item" bindtap="CreateTeam" animation="{{animation}}">创建球队/俱乐部</view>
+  <view class="item" bindtap="MyTeam" animation="{{animation}}">管理我的球队</view>
+</view>
+<view class="add" bindtap="closetool" hidden="{{toolflag}}" style='background-color:orangered'>X</view>
+

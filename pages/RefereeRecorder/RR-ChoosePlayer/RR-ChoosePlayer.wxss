@@ -1,0 +1,125 @@
+.container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.title{
+  background-color: #3369E8;
+  color:white;
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.topbar{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: fixed;
+  top: 50rpx;
+  background-color: #3369E8;
+  z-index: 9998;
+  text-align: center;
+  box-shadow: 0rpx 0rpx 50rpx rgba(0, 0, 0,0.5);
+  display: flex;
+  flex-direction: row;
+}
+
+.teamA{
+  height: 100%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis
+}
+
+.teamB{
+  height: 100%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis
+}
+
+.palyerlist{
+  margin-top: 190rpx;
+  padding-bottom: 20rpx;
+}
+
+.player{
+  width: 680rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0,0.3);
+}
+
+.checkbox{
+  width: 70rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  text-align: center;
+}
+
+.userpic{
+  height: 80rpx;
+  width: 80rpx;
+  font-size: 60rpx;
+  line-height: 80rpx;
+  text-align:center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50rpx;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+}
+
+.playerinfo{
+  height: 100rpx;
+  width: 345rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.name{
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid blueviolet;
+}
+
+.position{
+  font-size: 25rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: flex;
+  flex-direction: row
+}
+
+.playernum{
+  margin-top: 10rpx;
+  width: 115rpx;
+  margin-left: 20rpx;
+  height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15rpx
+}
+
+.submit{
+ border: 2px solid rgba(0, 0, 0, 0.2);
+ border-radius: 20px;
+ margin-top: 30rpx;
+ width:680rpx;
+ height:100rpx;
+ line-height: 100rpx;
+ background-color: rgba(241, 124, 103, 0.8);
+ color: white
+}

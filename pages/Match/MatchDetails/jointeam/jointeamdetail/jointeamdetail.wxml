@@ -1,0 +1,15 @@
+<view class="Top">队员列表</view>
+<block wx:for="{{playerlist}}" wx:key="id" wx:for-item="j">
+      <view class="player">
+        <view wx:if="{{j.Num}}" class="userpic">{{j.Num}}</view>
+        <image wx:else src="https://volleywang.cn/liansaiquan/images/wechat/team/logo.jpg" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{j.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{j.position1 != null}}">{{j.position1}}</view>
+              <view wx:if="{{j.position2 != null}}">{{j.position2}}</view>
+              <view wx:if="{{j.position3 != null}}">{{j.position3}}</view>
+            </view>
+          </view>
+      </view>
+    </block>

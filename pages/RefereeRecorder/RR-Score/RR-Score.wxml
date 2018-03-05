@@ -1,0 +1,12 @@
+<view class="top">编辑比分</view>
+<form bindsubmit="formSubmit">
+  <view class="tablename">{{matchinfo.TeamAName}}</view>
+  <view class="inputView">
+    <input focus="true" placeholder-style="color:gray" placeholder="请输入比分" maxlength="8" name="socreA" style='height:100rpx;line-height:100rpx;width:100%'/>
+  </view>
+  <view class="tablename">{{matchinfo.TeamBName}}</view>
+  <view class="inputView">
+    <input placeholder-style="color:gray" placeholder="请输入比分" maxlength="8" name="socreB" style='height:100rpx;line-height:100rpx;width:100%'/>
+  </view>
+  <button formType="submit" class="submit">确定修改</button>
+</form>

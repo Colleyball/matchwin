@@ -1,0 +1,106 @@
+page,.page {
+  font-family: 'PingFang SC', 'Helvetica Neue' ,Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background-color: black;
+  background-size: 100%;
+  background-position: bottom;
+  position: absolute;
+  background-attachment: fixed;
+}
+
+
+.container{
+  margin-top: 20rpx;
+}
+
+.card{
+  margin-top: 20rpx;
+  width: 680rpx;
+  height: 600rpx;
+  background-color: #FF3300;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+}
+ 
+.teamA {
+  width: 500rpx;
+  background-color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+}
+
+.coin {
+  margin-top: 75rpx;
+  width: 250rpx;
+  height: 250rpx;
+  background: url('https://volleywang.cn/liansaiquan/images/wechat/rr/coin.png') no-repeat;
+  background-position: center;
+  background-size: 280rpx;
+  box-shadow: 0rpx 0rpx 100rpx rgba(255,228, 120, 1);
+  border-radius: 125rpx;
+}
+.teamB {
+  width: 500rpx;
+  background-color: black;
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 75rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+}
+
+.list{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.smallcard{
+  width: 680rpx;
+  height: 160rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+ 
+.title {
+  width: 500rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+
+.smallcoindrink{
+  margin-top: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-position: center;
+  background-size: 100rpx;
+  background-image: url('https://volleywang.cn/liansaiquan/images/wechat/matchbox/coin/drink.png');
+}
+
+.smallcoineat{
+  margin-top: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background-position: center;
+  background-size: 100rpx;
+  background-image: url('https://volleywang.cn/liansaiquan/images/wechat/matchbox/coin/food.png');
+}
+
+
+

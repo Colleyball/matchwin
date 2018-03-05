@@ -1,0 +1,98 @@
+.container{
+  padding-top:0rpx;
+  margin: 0;
+  background-color: black;
+}
+
+.title{
+  text-align: center;
+  font-family: "微软雅黑";
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-top:1px solid white;
+  margin-top: 30rpx;
+  color: white;
+  width: 100%;
+}
+
+.pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.HomePic {
+  width: 680rpx;
+  height: 320rpx;
+  margin:0;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(255, 255, 255, 0.3);
+}
+
+.TopTeam{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.TopTeamTitle{
+  position: relative;
+  width: 650rpx;
+  margin-left: 50rpx;
+  height:55rpx;
+  line-height: 55rpx;
+  font-size: 35rpx;
+  border-radius: 25rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: black;
+  margin-top: 40rpx;
+}
+
+.item{
+  position: relative;
+  width: 650rpx;
+  margin-left: 50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.rank{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+.teamname{
+  width: 450rpx;
+  height: 50rpx;
+  margin-left: 25rpx;
+  border-radius: 25rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+.exp{
+  width: 100rpx;
+  height: 50rpx;
+  margin-left: 25rpx;
+  border-radius: 25rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+  color: black;
+}

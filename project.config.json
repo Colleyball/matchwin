@@ -1,0 +1,117 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.1",
+	"appid": "wxdc11b2839208065a",
+	"projectname": "%E8%B5%9B%E4%BA%8B%E7%AA%972",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "新生杯",
+					"pathName": "pages/Match/MatchDetails/MatchDetails",
+					"query": "id=31&name=2017杭电新生杯排球比赛"
+				},
+				{
+					"id": 1,
+					"name": "裁判记录",
+					"pathName": "pages/RefereeRecorder/RR-Home",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "裁判记录-输入裁判",
+					"pathName": "pages/RefereeRecorder/RR-Ref/RR-Ref",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "裁判记录-确认信息",
+					"pathName": "pages/MatchBox/RefereeRecorder/RR-Confirm/RR-Confirm",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "挑边",
+					"pathName": "pages/RefereeRecorder/RR-Side/RR-Side",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "menu",
+					"pathName": "pages/RefereeRecorder/RR-Menu/RR-Menu",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "比赛",
+					"pathName": "pages/Match/MatchDetails/MatchDetails",
+					"query": "id=31&name=2017杭电新生杯排球比赛"
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/User/User",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "编辑队员信息",
+					"pathName": "pages/Match/MatchDetails/SignupTeam/editplayer/editplayer",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "球队",
+					"pathName": "pages/Team/Team",
+					"query": "id=排球&uid=20170709"
+				},
+				{
+					"id": -1,
+					"name": "tools",
+					"pathName": "pages/MatchBox/MatchBox",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "自建比赛",
+					"pathName": "pages/RefereeRecorder/RR-CreateMatch/RR-CreateMatch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "自建比赛（定位）",
+					"pathName": "pages/RefereeRecorder/RR-Confirm-P/RR-Confirm-P",
+					"query": "TeamAid=107&TeamBid=88&TeamAName=会计新生杯排球队&TeamBName=杭电网安排球小队&Uid=20170709"
+				},
+				{
+					"id": -1,
+					"name": "选择队员",
+					"pathName": "pages/RefereeRecorder/RR-ChoosePlayer/RR-ChoosePlayer",
+					"query": ""
+				}
+			]
+		}
+	}
+}

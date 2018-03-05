@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="title">
+    请选择球队
+  </view>
+  <view class="topbar">
+    <view class="teamA" bindtap='teamA' style='width: {{Awidth}}%;background-color: rgba(255, 255, 255,{{Acolor}});border-bottom-right-radius:{{Aradius}}rpx;border-top-right-radius:{{Aradius}}rpx;font-size:{{Afont}}rpx'>{{TeamAName}}
+    </view>
+    <view class="teamB" bindtap='teamB' style='width: {{Bwidth}}%;background-color: rgba(255, 255, 255,{{Bcolor}});border-bottom-left-radius:{{Bradius}}rpx;border-top-left-radius:{{Bradius}}rpx;font-size:{{Bfont}}rpx'>{{TeamBName}}
+    </view>
+  </view>
+  <view class="teamlist" wx:if="{{Switchteam}}">
+    <view class="create">
+      <view class="join-team"></view>
+      <view class="create-team"></view>
+    </view>
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team" bindtap="ChooseTeamA" data-teamid="{{item.Teamid}}" data-teamname="{{item.TeamName}}">
+      <image class="teampic" src="{{item.Pic_x}}" mode='scaleToFill'></image>
+      <view class="teamname">{{item.TeamName}}</view>
+    </view>
+    <view bindtap="CleanTeamA   " wx:if="{{item.Teamid == ATeamid}}" class="teamcover">已选择</view>
+  </block>
+  </view>
+  <view class="teamlist" wx:if="{{!Switchteam}}">
+    <view class="create">
+      <view class="join-team"></view>
+      <view class="create-team"></view>
+    </view>
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team" bindtap="ChooseTeamB" data-teamid="{{item.Teamid}}" data-teamname="{{item.TeamName}}">
+      <image class="teampic" src="{{item.Pic_x}}" mode='scaleToFill'></image>
+      <view class="teamname">{{item.TeamName}}</view>
+    </view>
+    <view bindtap="CleanTeamB" wx:if="{{item.Teamid == BTeamid}}" class="teamcover">已选择</view>
+  </block>
+  </view>
+  <view class="bottombar" bindtap='submit'>确认选择
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/Match/MatchDetails/SignupTeam/chooseplayer/chooseplayer.wxml-->
+<view class="top">{{title}}</view>
+<view class="palyerlist" hidden='{{chooseplayer}}'>
+  <form bindsubmit='formsubmit'>
+    <checkbox-group name="cardid">
+      <block wx:for="{{playerlist}}" wx:key="id" >
+      <view class="player">
+        <checkbox value="{{item.Cardid}}" checked="{{item.checked}}" class="checkbox"/>
+          <image src="{{item.Pic}}" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{item.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{item.position1 != null}}">{{item.position1}}</view>
+              <view wx:if="{{item.position2 != null}}">{{item.position2}}</view>
+              <view wx:if="{{item.position3 != null}}">{{item.position3}}</view>
+            </view>
+          </view>
+      </view>
+      </block>
+    </checkbox-group>
+    <button class="submit" formType="submit">确认</button>
+  </form>
+</view>
+
+<view class="palyerlist" hidden='{{!chooseplayer}}'>
+  <form bindsubmit='confirm'>
+  <block wx:for="{{choosecardid}}" wx:for-item="i" wx:key="i">
+    <block wx:for="{{playerlist}}" wx:key="id" wx:for-item="j">
+      <view class="player" wx:if="{{i == j.Cardid}}">
+        <image src="{{j.Pic}}" class="userpic"></image>
+          <view class="playerinfo">
+            <view class="name">{{j.nickName}}</view>
+            <view class="position">
+              <view wx:if="{{j.position1 != null}}">{{j.position1}}</view>
+              <view wx:if="{{j.position2 != null}}">{{j.position2}}</view>
+              <view wx:if="{{j.position3 != null}}">{{j.position3}}</view>
+            </view>
+          </view>
+      </view>
+    </block>
+  </block>
+  <button class="submit2" bindtap='close' >返回</button>
+  <button class="submit" formType="submit">提交</button>
+  </form>
+</view>
+
+<view class="cover" hidden="{{toolflag}}"></view>
+

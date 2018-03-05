@@ -1,0 +1,172 @@
+.top{
+  width: 100%;
+  height: 250rpx;
+  background-color: #3369E8;
+  position: fixed;
+  top:0;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0rpx 10rpx 50rpx rgba(0, 0, 0,0.5);
+}
+
+.add{
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: white;
+  position: fixed;
+  bottom: 15rpx;
+  right: 325rpx;
+  background-color: blueviolet;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 75rpx;
+  box-shadow: 0px 0px  50px rgba(0, 0, 0, 0.6);
+}
+
+.coverbg{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(255,255,255,0.95);
+  overflow: hidden;
+  text-align: center;
+}
+
+.videotitle{
+  font-size: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid black;
+  margin-top: 300rpx;
+}
+
+.tip{
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+
+.videoaddress{
+  font-size: 20rpx;
+  margin-top: 50rpx
+}
+
+.copy{
+  width:250rpx;
+  height: 100rpx;
+  margin-left: 250rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  color: white;
+  text-align: center;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx rgba(0, 0, 0,0.3);
+  background-color: #3369E8;
+  margin-top: 50rpx
+}
+
+.teamA{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 60rpx;
+  color: white;
+  text-align: left;
+  margin-left: 35rpx
+}
+
+.fightinfo{
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+}
+
+.h2h{
+  margin-top: 10rpx;
+  height: 120rpx;
+  width: 40%;
+  margin-left: 35rpx;
+  line-height: 120rpx;
+  font-size: 60rpx;
+  color: white;
+  text-align: center;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx rgba(0, 0, 0,0.3);
+}
+
+.oneh2h{
+  margin-top: 20rpx;
+  height: 100rpx;
+  width: 680rpx;
+  margin-left: 35rpx;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: white;
+  text-align: center;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 20rpx rgba(0, 0, 0,0.3);
+}
+
+.teamB{
+  height: 150rpx;
+  line-height: 150rpx;
+  width: 40%;
+  margin-left: 10%;
+  font-size: 30rpx;
+  color: white;
+  text-align: center;
+}
+
+.resultlist{
+  margin-top: 300rpx;
+}
+
+.result{
+  height: auto;
+  width: 680rpx;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 5rpx 40rpx rgba(51, 105, 232,0.8);
+  text-align: center;
+  margin-bottom: 40rpx;
+}
+
+.matchinfo{
+  height:60rpx;
+  line-height:30rpx;
+  font-size: 25rpx;
+  background-color: rgba(30, 144, 255,0.6);
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.title{
+  height:50rpx;
+  line-height:50rpx;
+  font-size: 35rpx;
+  border-bottom: 1rpx solid #3369E8;
+}
+
+.matchdetail{
+  height:40rpx;
+  line-height:40rpx;
+  font-size: 30rpx;
+}
+
+.ref{
+  height:40rpx;
+  line-height:40rpx;
+  font-size: 30rpx;
+  border-top: 1rpx solid #3369E8;
+}
+
+.video{
+  height:60rpx;
+  line-height:60rpx;
+  font-size: 35rpx;
+  color:white;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  background-color: #3369E8;
+}

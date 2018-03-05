@@ -1,0 +1,18 @@
+<block wx:if="{{datalist==0}}">
+  <view class="tip" style="margin-top:150rpx;">你还未加入任何一只球队哦</view>
+  <view class="tip">快去球队列表中看看吧~</view>
+  <view class="gototeam">球队列表</view>
+</block>
+
+<block wx:if="{{datalist != 0}}">
+  <view class="teamlist">
+  <block wx:for="{{datalist}}" wx:key="Teamid">
+    <view class="team">
+      <image class="teampic" src="{{item.Pic_x}}" mode='scaleToFill' bindtap="bindViewTapTeam" data-teamid="{{item.Teamid}}" data-fans='{{item.teamfans}}'></image>
+      <view class="like" catchtap="join" data-teamid="{{item.Teamid}}">查看详情</view>
+      <view class="teamname">{{item.TeamName}}</view>
+      <view class="teamdetail">队长：{{item.TeamLeader}}</view>
+    </view>
+  </block>
+  </view>
+</block>

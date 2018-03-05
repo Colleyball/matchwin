@@ -1,0 +1,24 @@
+<view class="Top">
+  <image src="{{userInfo.avatarUrl}}" class="userpic"></image>
+  <view class="name">{{userInfo.nickName}}</view>
+</view>
+
+<view class="card" bindtap='bindViewTapMyCard'>
+<image class="pic" mode="scaletofill" src='https://volleywang.cn/liansaiquan/images/user/mycard.png'></image>
+<view class="title">我的运动卡片</view>
+</view>
+
+<view class="card" bindtap='bindViewTapMyLike'>
+<image class="pic" src='https://volleywang.cn/liansaiquan/images/user/myfav.png'></image>
+<view class="title">我的关注</view>
+</view>
+
+<view class="card" bindtap='bindViewTapSignAll'>
+<image class="pic" src='https://volleywang.cn/liansaiquan/images/user/signall.png'></image>
+<view class="title">一键签到</view>
+</view>
+
+<view class="card" bindtap='Setting'>
+<image class="pic" src='https://volleywang.cn/liansaiquan/images/user/settings.png'></image>
+<view class="title">反馈·合作</view>
+</view>

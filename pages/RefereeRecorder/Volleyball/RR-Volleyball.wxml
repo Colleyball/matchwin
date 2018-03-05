@@ -1,0 +1,386 @@
+<view class="cover" hidden="{{toolflag}}"></view>
+
+<view class='title' wx:if="{{lastmatchinfo[0].Position == 0}}">
+  <view class="teamnameA">{{matchinfo.TeamAName}}</view>
+  <view class="teamnameB">{{matchinfo.TeamBName}}</view>
+</view>
+<view class='title' wx:if="{{lastmatchinfo[0].Position == 1}}">
+  <view class="teamnameA">{{matchinfo.TeamBName}}</view>
+  <view class="teamnameB">{{matchinfo.TeamAName}}</view>
+</view>
+
+<view class="court" wx:if="{{lastmatchinfo[0].Position == 0}}">
+  <view class="playcourt">
+    <view style='display: flex;flex-direction: row'>
+      <!--A-5号位-->
+      <view class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <view class="num">{{lastmatchinfo[0].TeamA5}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA5N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--A-4号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA4}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA4N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--B-2号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB2}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB2N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+        <!--B-1号位--发球-->
+        <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--B-1号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+      </view>
+    </view>
+    <view style='display: flex;flex-direction: row'>
+      <view class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <!--A-6号位--> 
+        <view class="num">{{lastmatchinfo[0].TeamA6}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA6N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--A-3号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA3}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA3N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--B-3号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB3}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB3N}}</view>
+      </view>
+      <view class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--B-6号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB6}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB6N}}</view>
+      </view>
+    </view>
+    <view style='display: flex;flex-direction: row'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+        <!--A-1号位--发球-->
+        <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <!--A-1号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--A-2号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA2}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA2N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--B-4号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB4}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB4N}}</view>
+      </view>
+      <view class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--B-5号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB5}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB5N}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="matchinfo">
+    <view class="TeamAScore">{{setA}}</view>
+    <view class="teaminfo">
+      <view class="Timeout">
+        <view class="lefttimes">{{lastmatchinfo[0].TeamATimeout}}</view>
+        <view class="itemtitle">T</view>
+        <view class="lefttimes">{{lastmatchinfo[0].TeamBTimeout}}</view>
+      </view>
+      <view class="Substitution">
+        <view class="lefttimes">{{lastmatchinfo[0].TeamASub}}</view>
+        <view class="itemtitle">S</view>
+        <view class="lefttimes">{{lastmatchinfo[0].TeamBSub}}</view>
+      </view>
+    </view>
+    <view class="TeamBScore">{{setB}}</view>
+  </view>
+  <view class="control">
+    <view class="AddScoreA" bindtap='addsocre' hover-class='AddScorehover' data-team='A'>十</view>
+    <view class="othercontrol">
+      <view class="Timeoutcontrol" bindtap='showtimeout'>暂停</view>
+      <view class="Substitutioncontrol" bindtap='sub'>换人</view>
+    </view>
+    <view class="AddScoreB" bindtap='addsocre' hover-class='AddScorehover' data-team='B'>十</view>
+  </view>
+</view>
+
+<view class="court" wx:if="{{lastmatchinfo[0].Position == 1}}">
+  <view class="playcourt">
+    <view style='display: flex;flex-direction: row'>
+      <!--B-5号位-->
+      <view class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <view class="num">{{lastmatchinfo[0].TeamB5}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB5N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--B-4号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB4}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB4N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--A-2号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA2}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA2N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+        <!--A-1号位--发球-->
+        <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--A-1号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+      </view>
+    </view>
+    <view style='display: flex;flex-direction: row'>
+      <view class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <!--B-6号位--> 
+        <view class="num">{{lastmatchinfo[0].TeamB6}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB6N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--B-3号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB3}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB3N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--A-3号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA3}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA3N}}</view>
+      </view>
+      <view class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--A-6号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA6}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA6N}}</view>
+      </view>
+    </view>
+    <view style='display: flex;flex-direction: row'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+        <!--B-1号位--发球-->
+        <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+      </view>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-right: 2rpx solid white;'>
+        <!--B-1号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-right: 1rpx solid white;'>
+        <!--B-2号位-->
+        <view class="num">{{lastmatchinfo[0].TeamB2}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB2N}}</view>
+      </view>
+      <view class='player' style='width:16.7%;background-color:yellow;border-left: 1rpx solid white;'>
+        <!--A-4号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA4}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA4N}}</view>
+      </view>
+      <view class='player' style='width:33.25%;border-left: 2rpx solid white;'>
+        <!--A-5号位-->
+        <view class="num">{{lastmatchinfo[0].TeamA5}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA5N}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="matchinfo">
+    <view class="TeamAScore">{{setB}}</view>
+    <view class="teaminfo">
+      <view class="Timeout">
+        <view class="lefttimes">{{lastmatchinfo[0].TeamBTimeout}}</view>
+        <view class="itemtitle">T</view>
+        <view class="lefttimes">{{lastmatchinfo[0].TeamATimeout}}</view>
+      </view>
+      <view class="Substitution">
+        <view class="lefttimes">{{lastmatchinfo[0].TeamBSub}}</view>
+        <view class="itemtitle">S</view>
+        <view class="lefttimes">{{lastmatchinfo[0].TeamASub}}</view>
+      </view>
+    </view>
+    <view class="TeamBScore">{{setA}}</view>
+  </view>
+  <view class="control">
+    <view class="AddScoreA" bindtap='addsocre' hover-class='AddScorehover' data-team='B'>十</view>
+    <view class="othercontrol">
+      <view class="Timeoutcontrol" bindtap='showtimeout'>暂停</view>
+      <view class="Substitutioncontrol" bindtap='sub'>换人</view>
+    </view>
+    <view class="AddScoreB" bindtap='addsocre' hover-class='AddScorehover' data-team='A'>十</view>
+  </view>
+</view>
+
+
+<view class='Score' wx:if="{{lastmatchinfo[0].Position == 0}}">
+  <view class="match">{{lastmatchinfo[0].MatchA}}-{{lastmatchinfo[0].MatchB}}</view>
+  <view class="set">{{lastmatchinfo[0].Set1A}}-{{lastmatchinfo[0].Set1B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set2A}}-{{lastmatchinfo[0].Set2B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set3A}}-{{lastmatchinfo[0].Set3B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set4A}}-{{lastmatchinfo[0].Set4B}}</view>
+  <view class="set">{{lastmatchinfo[0].Set5A}}-{{lastmatchinfo[0].Set5B}}</view>
+</view>
+<view class='Score' wx:if="{{lastmatchinfo[0].Position == 1}}">
+  <view class="match">{{lastmatchinfo[0].MatchB}}-{{lastmatchinfo[0].MatchA}}</view>
+  <view class="set">{{lastmatchinfo[0].Set1B}}-{{lastmatchinfo[0].Set1A}}</view>
+  <view class="set">{{lastmatchinfo[0].Set2B}}-{{lastmatchinfo[0].Set2A}}</view>
+  <view class="set">{{lastmatchinfo[0].Set3B}}-{{lastmatchinfo[0].Set3A}}</view>
+  <view class="set">{{lastmatchinfo[0].Set4B}}-{{lastmatchinfo[0].Set4A}}</view>
+  <view class="set">{{lastmatchinfo[0].Set5B}}-{{lastmatchinfo[0].Set5A}}</view>
+</view>
+<view class='Scoretip'>
+  <view class="matchtip">总比分</view>
+  <view class="settip">第一局</view>
+  <view class="settip">第二局</view>
+  <view class="settip">第三局</view>
+  <view class="settip">第四局</view>
+  <view class="settip">第五局</view>
+</view>
+
+<view class="tool">
+  <view class="toolitems"><view class="toolcontent" bindtap='editscore'>修改比分</view></view>
+  <view class="toolitems2"><view class="toolcontent2" bindtap='home'>主菜单</view></view>
+  <view class="toolitems"><view class="toolcontent" bindtap='editsideposition'>发球/场地</view></view>
+</view>
+
+<view class="scoremethod" hidden='{{scoremethodflag}}'>
+  <view class="toollist spike" animation="{{animation}}" bindtap='choosesocremethod'
+  data-scoremethod='spike'>进攻
+  </view>
+  <view class="toollist server" animation="{{animation}}" bindtap='server' data-scoremethod='server' data-teambserver="{{lastmatchinfo[0].TeamB1C}}" data-teamaserver="{{lastmatchinfo[0].TeamA1C}}">发球
+  </view>
+  <view class="toollist block" animation="{{animation}}" bindtap='choosesocremethod' data-scoremethod='block'>拦网
+  </view>
+  <view class="toollist fault" animation="{{animation}}" bindtap='choosesocremethod' data-scoremethod='fault'>对方失误
+  </view>
+</view>
+
+<block wx:if="{{lastmatchinfo[0].Position == 0}}">
+<view class="table" hidden='{{showteamA}}'>
+  <view class="before">
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA5C}}'>
+      {{lastmatchinfo[0].TeamA5}} {{lastmatchinfo[0].TeamA5N}}
+    </view>
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA6C}}'>
+      {{lastmatchinfo[0].TeamA6}} {{lastmatchinfo[0].TeamA6N}}
+    </view> 
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA1C}}'>
+      {{lastmatchinfo[0].TeamA1}} {{lastmatchinfo[0].TeamA1N}}
+    </view>
+  </view>
+  <view class="front">
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA4C}}'>
+      {{lastmatchinfo[0].TeamA4}} {{lastmatchinfo[0].TeamA4N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA3C}}'>
+      {{lastmatchinfo[0].TeamA3}} {{lastmatchinfo[0].TeamA3N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA2C}}'>
+      {{lastmatchinfo[0].TeamA2}} {{lastmatchinfo[0].TeamA2N}}
+    </view>
+  </view>
+</view>
+
+<view class="table" hidden='{{showteamB}}'>
+  <view class="front">
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB2C}}'>
+      {{lastmatchinfo[0].TeamB2}} {{lastmatchinfo[0].TeamB2N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB3C}}'>
+      {{lastmatchinfo[0].TeamB3}} {{lastmatchinfo[0].TeamB3N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB4C}}'>
+      {{lastmatchinfo[0].TeamB4}} {{lastmatchinfo[0].TeamB4N}}
+    </view>
+  </view>
+    <view class="before">
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB1C}}'>
+      {{lastmatchinfo[0].TeamB1}} {{lastmatchinfo[0].TeamB1N}}
+    </view>
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB6C}}'>
+      {{lastmatchinfo[0].TeamB6}} {{lastmatchinfo[0].TeamB6N}}
+    </view> 
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB5C}}'>
+      {{lastmatchinfo[0].TeamB5}} {{lastmatchinfo[0].TeamB5N}}
+    </view>
+  </view>
+</view>
+</block>
+
+<block wx:if="{{lastmatchinfo[0].Position == 1}}">
+<view class="table" hidden='{{showteamA}}'>
+  <view class="front">
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA2C}}'>
+      {{lastmatchinfo[0].TeamA2}} {{lastmatchinfo[0].TeamA2N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA3C}}'>
+      {{lastmatchinfo[0].TeamA3}} {{lastmatchinfo[0].TeamA3N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA4C}}'>
+      {{lastmatchinfo[0].TeamA4}} {{lastmatchinfo[0].TeamA4N}}
+    </view>
+  </view>
+  <view class="before">
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA1C}}'>
+      {{lastmatchinfo[0].TeamA1}} {{lastmatchinfo[0].TeamA1N}}
+    </view>
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA6C}}'>
+      {{lastmatchinfo[0].TeamA6}} {{lastmatchinfo[0].TeamA6N}}
+    </view> 
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamA5C}}'>
+      {{lastmatchinfo[0].TeamA5}} {{lastmatchinfo[0].TeamA5N}}
+    </view>
+  </view>
+</view>
+
+<view class="table" hidden='{{showteamB}}'>
+  <view class="before">
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB5C}}'>
+      {{lastmatchinfo[0].TeamB5}} {{lastmatchinfo[0].TeamB5N}}
+    </view>
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB6C}}'>
+      {{lastmatchinfo[0].TeamB6}} {{lastmatchinfo[0].TeamB6N}}
+    </view> 
+    <view class="b" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB1C}}'>
+      {{lastmatchinfo[0].TeamB1}} {{lastmatchinfo[0].TeamB1N}}
+    </view>
+  </view>
+  <view class="front">
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB4C}}'>
+      {{lastmatchinfo[0].TeamB4}} {{lastmatchinfo[0].TeamB4N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB3C}}'>
+      {{lastmatchinfo[0].TeamB3}} {{lastmatchinfo[0].TeamB3N}}
+    </view>
+    <view class="a" bindtap='confirmscore' data-cardid='{{lastmatchinfo[0].TeamB2C}}'>
+      {{lastmatchinfo[0].TeamB2}} {{lastmatchinfo[0].TeamB2N}}
+    </view>
+  </view>
+</view>
+</block>
+
+
+<view class="scoremethod" hidden='{{showtimeout}}'>
+  <view wx:if="{{lastmatchinfo[0].TeamATimeout >= 1}}" class="showtimeout teamAtimeout" animation="{{animation}}" bindtap='timeout'
+  data-team='A'>{{matchinfo.TeamAName}}
+  </view>
+  <view wx:else class="showtimeout teamAtimeout" bindtap='over' animation="{{animation}}" 
+  data-team='A'>{{matchinfo.TeamAName}} X
+  </view>
+  <view wx:if="{{lastmatchinfo[0].TeamBTimeout >= 1}}" class="showtimeout teamBtimeout" animation="{{animation}}" bindtap='timeout' data-team='B'>{{matchinfo.TeamBName}}
+  </view>
+  <view wx:else class="showtimeout teamBtimeout" bindtap='over' animation="{{animation}}" data-team='B'>{{matchinfo.TeamBName}} X
+  </view>
+</view>
+<view class="timeouttime" hidden='{{showtimeouttime}}'>{{second}}</view>
+
+<view class="cancel" hidden="{{cancel}}" animation="{{animation}}" bindtap='closetool'>取消
+</view>

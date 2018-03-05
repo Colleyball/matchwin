@@ -1,0 +1,28 @@
+<view class="search">
+  <form bindsubmit="formSubmit">
+    <view class="searcharea">
+      <view class="searchbox" hover="true" hover-class='hover'> 
+        <input placeholder-style="color:gray" placeholder="输入通信vs机械试试" maxlength="20" name="name" style="height: 85rpx;line-height: 85rpx"/>
+      </view>
+      <view class="btn" hover="true" hover-class='hover'>
+        <button formType="submit" class="submit" plain='true' style='border:none; border-left: 1rpx rgba(0, 0, 0,0.1) solid;border-radius:0' >→</button>
+      </view>
+    </view>
+  </form>
+  <view class="title">赛事信息搜索引擎</view>
+</view>
+
+<view class="actlist">
+  <block wx:for="{{datalist}}" wx:key="id">
+    <view class="act" bindtap='openact' data-thisurl='{{item.url}}'>
+      <image class="actpic" src="{{item.pic}}" mode='aspectFill'></image>
+      <view class="actname">{{item.name}}</view>
+      <view class="actdetail">{{item.detail}}</view>
+    </view>
+  </block>
+  <view class="act" bindtap='winrank'>
+    <image class="actpic" mode='aspectFill' src="https://volleywang.cn/liansaiquan/images/find/winrank.jpg"></image>
+    <view class="actname">[数据]杭电排球胜率排行</view>
+    <view class="actdetail">Who is No.1?</view>
+  </view>
+</view>

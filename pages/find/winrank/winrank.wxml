@@ -1,0 +1,35 @@
+<view class="top">杭电排球胜率排行</view>
+<block wx:for="{{resultlist}}" wx:key="no">
+  <view class="college" wx:if="{{item.no+1 == 1}}" style='background-color:#121212'>
+    <view class="rank" style='background-color:#fffed1;color:#ff9500'>{{item.no+1}}</view>
+    <view class="collegeh2h">
+      <view class="name" style='color:#ff9500;font-size:55rpx'>{{item.college}}</view>
+      <view class="detail" style='color:#ffd191'>总场次：{{item.match}} 胜：{{item.win}} 负：{{item.lost}}</view>
+    </view>
+    <view class="pre" style='color:#ffd191'>{{item.percent}}%</view>
+  </view>
+  <view class="college" wx:if="{{item.no+1 == 2}}" style='background-color:#721532'>
+    <view class="rank" style='background-color:#323341;color:#E0C0AB'>{{item.no+1}}</view>
+    <view class="collegeh2h">
+      <view class="name" style='color:#fff;font-size:50rpx'>{{item.college}}</view>
+      <view class="detail" style='color:#E0C0AB'>总场次：{{item.match}} 胜：{{item.win}} 负：{{item.lost}}</view>
+    </view>
+    <view class="pre" style='color:#E0C0AB'>{{item.percent}}%</view>
+  </view>
+  <view class="college" wx:if="{{item.no+1 == 3}}" style='background-color:#FDFFDF'>
+    <view class="rank" style='background-color:#011935;color:#E0C0AB'>{{item.no+1}}</view>
+    <view class="collegeh2h">
+      <view class="name" style='color:#00343F;font-size:45rpx'>{{item.college}}</view>
+      <view class="detail" style='color:#1DB0B8'>总场次：{{item.match}} 胜：{{item.win}} 负：{{item.lost}}</view>
+    </view>
+    <view class="pre" style='color:#1DB0B8'>{{item.percent}}%</view>
+  </view>
+  <view class="college" wx:if="{{item.no!=0&&item.no!=1&&item.no!=2}}">
+    <view class="rank">{{item.no+1}}</view>
+    <view class="collegeh2h">
+      <view class="name">{{item.college}}</view>
+      <view class="detail">总场次：{{item.match}} 胜：{{item.win}} 负：{{item.lost}}</view>
+    </view>
+    <view class="pre">{{item.percent}}%</view>
+  </view>
+</block>

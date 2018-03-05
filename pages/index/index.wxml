@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTapMatchBox" class="Game">
+    <image class="HomePic" src="{{mainpic.tool}}"  mode="scaleToFill" ></image>
+    <text class="HomeTxtZh">竞赛工具箱</text>
+  </view>
+  <view  bindtap="bindViewTapFootball" class="Game">
+    <image class="HomePic" src="{{mainpic.football}}"  mode="aspectFill" ></image>
+    <text class="HomeTxtZh">足球</text>
+  </view>
+  <view  bindtap="bindViewTapVolleyball" class="Game">
+    <image class="HomePic" src="{{mainpic.volleyball}}"  mode="aspectFill" ></image>
+    <text class="HomeTxtZh">排球</text>
+  </view>
+  <view  bindtap="bindViewTapBasketball" class="Game">
+    <image class="HomePic" src="{{mainpic.basketball}}"  mode="aspectFill" ></image>
+    <text class="HomeTxtZh">篮球</text>
+  </view>
+  
+  <!--view  bindtap="bindViewTapBadminton" class="Game" >
+    <image class="HomePic" src="{{mainpic.badminton}}"  mode="center" ></image>
+    <view class="HomeTxt">Badminton</view>
+    <text class="HomeTxtZh">羽毛球</text>
+  </view-->
+  </view>

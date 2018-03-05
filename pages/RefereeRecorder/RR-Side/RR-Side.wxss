@@ -1,0 +1,155 @@
+page,.page {
+  font-family: 'PingFang SC', 'Helvetica Neue' ,Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+  background:url('http://www.volleywang.cn/liansaiquan/images/matchbox/sb/bg.png') no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: absolute;
+  background-attachment: fixed;
+}
+
+
+.container{
+}
+
+.card{
+  width: 680rpx;
+  height: 600rpx;
+  background-color: #FF3300;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  text-align: center;
+  align-items: center;
+}
+ 
+.teamA {
+  width: 500rpx;
+  background-color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+}
+
+.coin {
+  margin-top: 75rpx;
+  width: 250rpx;
+  height: 250rpx;
+  background: url('https://volleywang.cn/liansaiquan/images/wechat/rr/coin.png') no-repeat;
+  background-position: center;
+  background-size: 280rpx;
+  box-shadow: 0rpx 0rpx 100rpx rgba(255,228, 120, 1);
+  border-radius: 125rpx;
+}
+.teamB {
+  width: 500rpx;
+  background-color: black;
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 75rpx;
+  border-radius: 20rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+}
+
+.submit2{
+ border: 2px solid rgba(0, 0, 0, 0.2);
+ width:680rpx;
+ height:100rpx;
+ margin-left: 35rpx;
+ line-height: 100rpx;
+ background-color: rgba(255, 255, 255, 0.8);
+ color: black;
+ position: fixed;
+  top: 1050rpx;
+  border-radius: 30rpx;
+  z-index: 9999
+}
+
+.court{
+  display:flex;
+  flex-direction: row;
+  width: 680rpx;
+  height: 340rpx;
+  position: fixed;
+  top: 200rpx;
+  left:35rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  z-index: 9999
+}
+
+.left{
+  width: 340rpx;
+  border-right: 1rpx solid black;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 65rpx; 
+}
+
+.cover{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  background:rgba(255,255,255,0.95);
+  overflow: hidden;
+  z-index: 9998;
+}
+
+.server{
+  width: 680rpx;
+  height: 220rpx;
+  position: fixed;
+  top: 780rpx;
+  left:35rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.chooseserver{
+  width: 500rpx;
+  height: 220rpx;
+  margin-left: 90rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.item{
+  width: 500rpx;
+  text-align: center;
+  height: 110rpx;
+  line-height: 110rpx;
+}
+
+.title{
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  top: 50rpx;
+  left:35rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+}
+
+.title2{
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: fixed;
+  top: 630rpx;
+  left:35rpx;
+  border-radius: 30rpx;
+  box-shadow: 0rpx 0rpx 30rpx rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-align: center;
+}

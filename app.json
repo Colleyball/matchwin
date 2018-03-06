@@ -24,28 +24,13 @@
     "pages/find/winrank/winrank",
     "pages/User/Setting/Setting",
     "pages/Match/MatchDetails/jointeam/jointeam",
-    "pages/RefereeRecorder/RR-Home",
-    "pages/RefereeRecorder/Volleyball/RR-Volleyball",
-    "pages/RefereeRecorder/RR-Start/RR-Start",
-    "pages/RefereeRecorder/RR-Menu/RR-Menu",
-    "pages/RefereeRecorder/RR-Confirm/RR-Confirm",
-    "pages/RefereeRecorder/RR-Position/RR-Position",
-    "pages/RefereeRecorder/RR-Side/RR-Side",
-    "pages/Match/MatchDetails/schedule/schedule",
-    "pages/RefereeRecorder/application/application",
-    "pages/RefereeRecorder/RR-sub/RR-sub",
     "pages/Match/MatchDetails/SignupTeam/chooseplayer/chooseplayer",
     "pages/Match/MatchDetails/SignupTeam/editplayer/editplayer",
     "pages/Team/TeamDetails/EditInfo/EditInfo",
     "pages/Match/MatchDetails/jointeam/jointeamdetail/jointeamdetail",
-    "pages/RefereeRecorder/RR-Score/RR-Score",
     "pages/Match/MatchDetails/schedule/live/live",
     "pages/Match/MatchDetails/schedule/end/endmatch",
-    "pages/MatchBox/Coin/coin",
-    "pages/RefereeRecorder/RR-CreateMatch/RR-CreateMatch",
-    "pages/RefereeRecorder/RR-Confirm-P/RR-Confirm-P",
-    "pages/RefereeRecorder/RR-Menu-P/RR-Menu-P",
-    "pages/RefereeRecorder/RR-ChoosePlayer/RR-ChoosePlayer"
+    "pages/MatchBox/Coin/coin"
   ],
   "window": {
     "navigationBarTitleText": "赛事窗 MatchWin.cn",
@@ -70,12 +55,6 @@
         "iconPath": "images/find-act.png",
         "pagePath": "pages/find/find",
         "text": "发现"
-      },
-      {
-        "selectedIconPath": "images/ref.png",
-        "iconPath": "images/ref-act.png",
-        "pagePath": "pages/RefereeRecorder/RR-Home",
-        "text": "数据统计"
       },
       {
         "selectedIconPath": "images/user.png",

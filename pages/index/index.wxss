@@ -7,6 +7,32 @@ page,.page {
   background-color: black;
 }
 
+.topbar {
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+
+.userpic {
+  margin-top: -10rpx;
+  margin-left: 20rpx;
+  width: 70rpx;
+  height:70rpx;
+  border-radius: 50%;
+}
+
+.username {
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
 .Game {
   display: flex;
   flex-direction: column;
@@ -33,4 +59,3 @@ page,.page {
   margin-bottom:140rpx;
   border-top: 1rpx solid rgba(255, 255, 255, 0.5);
 }
-

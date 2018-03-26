@@ -1,5 +1,9 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="topbar">
+    <image class="userpic" src='{{userInfo.avatarUrl}}' mode="aspectFill"></image>
+    <view class="username">{{userInfo.nickName}}</view>
+  </view>
   <view  bindtap="bindViewTapMatchBox" class="Game">
     <image class="HomePic" src="{{mainpic.tool}}"  mode="scaleToFill" ></image>
     <text class="HomeTxtZh">竞赛工具箱</text>
@@ -16,10 +20,4 @@
     <image class="HomePic" src="{{mainpic.basketball}}"  mode="aspectFill" ></image>
     <text class="HomeTxtZh">篮球</text>
   </view>
-  
-  <!--view  bindtap="bindViewTapBadminton" class="Game" >
-    <image class="HomePic" src="{{mainpic.badminton}}"  mode="center" ></image>
-    <view class="HomeTxt">Badminton</view>
-    <text class="HomeTxtZh">羽毛球</text>
-  </view-->
-  </view>
+</view>

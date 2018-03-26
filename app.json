@@ -30,7 +30,8 @@
     "pages/Match/MatchDetails/jointeam/jointeamdetail/jointeamdetail",
     "pages/Match/MatchDetails/schedule/live/live",
     "pages/Match/MatchDetails/schedule/end/endmatch",
-    "pages/MatchBox/Coin/coin"
+    "pages/MatchBox/Coin/coin",
+    "pages/world/world"
   ],
   "window": {
     "navigationBarTitleText": "赛事窗 MatchWin.cn",
@@ -53,6 +54,12 @@
       {
         "selectedIconPath": "images/find.png",
         "iconPath": "images/find-act.png",
+        "pagePath": "pages/world/world",
+        "text": "全球体育"
+      },
+      {
+        "selectedIconPath": "images/find.png",
+        "iconPath": "images/find-act.png",
         "pagePath": "pages/find/find",
         "text": "发现"
       },
@@ -60,7 +67,7 @@
         "selectedIconPath": "images/user.png",
         "iconPath": "images/user-act.png",
         "pagePath": "pages/User/User",
-        "text": "我"
+        "text": "约赛"
       }
     ]
   }

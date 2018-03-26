@@ -65,6 +65,21 @@ Page({
    //判断用户有无登陆 
   },
   onShow: function () {
+    var that = this
+    wx.request({
+      url: 'https://www.sojson.com/open/api/weather/json.shtml?city=杭州',
+      header: {
+        "content-type": "application/json;charset=utf8"
+      },
+      method: "GET",
+      data: {
+      },
+      success:function (res) {
+        that.setData({
+          weather:res.data
+        })
+      }
+    })
   },
   onLaunch:function() {
   },

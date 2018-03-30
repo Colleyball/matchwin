@@ -1,18 +1,25 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="topbar">
+  <view class="topbar" bindtap='bindUserInfo'>
     <image class="userpic" src='{{userInfo.avatarUrl}}' mode="aspectFill"></image>
     <view class="username">{{userInfo.nickName}}</view>
-    <view class="weather">{{weather.data.wendu}}℃，{{weather.data.ganmao}}</view>
+    <view class="weather" catchtap='bindWeather'>{{weather.data.wendu}}℃，{{weather.data.ganmao}}</view>
+  </view>
+  <view class="matchlive" bindtap='bindLive'>
+    <view class="live-teamA">{{matchinfo.TeamAName}}</view>
+      <view class="live-score">
+        <view class="live-scoreA">{{setA}}</view>
+        <view class="live-vs">:</view>
+        <view class="live-scoreB">{{setB}}</view>
+      </view>
+    <view class="live-teamB">{{matchinfo.TeamBName}}</view>
+  </view>
+  <view class="live-tip"> 正在直播
   </view>
   <view class="list">
     <view  bindtap="bindViewTapMatchBox" class="Game">
       <image class="HomePic" src="{{mainpic.tool}}"  mode="scaleToFill" ></image>
       <text class="HomeTxtZh">竞赛工具箱</text>
-    </view>
-    <view  bindtap="bindViewTapFootball" class="Game">
-      <image class="HomePic" src="{{mainpic.football}}"  mode="aspectFill" ></image>
-      <text class="HomeTxtZh">足球</text>
     </view>
     <view  bindtap="bindViewTapVolleyball" class="Game">
       <image class="HomePic" src="{{mainpic.volleyball}}"  mode="aspectFill" ></image>
@@ -22,5 +29,36 @@
       <image class="HomePic" src="{{mainpic.basketball}}"  mode="aspectFill" ></image>
       <text class="HomeTxtZh">篮球</text>
     </view>
+    <view  bindtap="bindViewTapFootball" class="Game">
+      <image class="HomePic" src="{{mainpic.football}}"  mode="aspectFill" ></image>
+      <text class="HomeTxtZh">足球</text>
+    </view>
   </view>
 </view>
+<view class="cover" hidden="{{weatherflag}}"></view>
+<view class="weather-box" hidden="{{weatherflag}}">
+  <view class="weather-detail"></view>
+  <view class="weather-detail">
+    {{weather.data.forecast[0].date}}
+  </view>
+  <view class="weather-detail">
+    {{weather.data.forecast[0].notice}}
+  </view>
+  <view class="weather-detail">
+    空气湿度：{{weather.data.shidu}}
+  </view>
+  <view class="weather-detail">
+    pm25：{{weather.data.pm25}}
+  </view>
+  <view class="weather-detail">
+    空气质量：{{weather.data.quality}}
+  </view>
+  <view class="weather-detail">
+    最高气温：{{weather.data.forecast[0].high}}
+  </view>
+  <view class="weather-detail">
+    最低气温：{{weather.data.forecast[0].low}}
+  </view>
+  <view class="weather-detail"></view>
+</view>
+<view class="close" bindtap="bindWeather" hidden="{{weatherflag}}">X</view>

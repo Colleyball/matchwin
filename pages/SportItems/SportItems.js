@@ -39,7 +39,7 @@ Page({
       matchtype:options.id
     })
     wx.setNavigationBarTitle({
-      title: options.id + ' 联赛圈',
+      title: options.id + ' 赛事窗',
     })
     if (options.id == '排球') {
       this.setData({

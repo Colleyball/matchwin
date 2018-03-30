@@ -1,2 +1,15 @@
-<!--pages/world/world.wxml-->
-<text>pages/world/world.wxml</text>
+<view class="container">
+  <view class="topbar">
+    <view class="username">智能推荐{{userInfo.nickName}}</view>
+    <view class="weather">更新时间 {{news.data.channel.pubDate}}</view>
+  </view>
+  <view class="news_list">
+    <block wx:for="{{news.data.channel.item}}">
+      <view class="news" bindtap='bindReadnews'>
+        <view class="news_title">{{item.title}}
+        </view>
+        <view class="news_info">{{item.pubDate}} {{item.author}}</view>
+      </view>
+    </block>
+  </view>
+</view>

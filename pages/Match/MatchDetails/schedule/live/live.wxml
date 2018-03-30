@@ -27,10 +27,10 @@
         <view class="num">{{lastmatchinfo[0].TeamB2}}</view>
         <view class="name">{{lastmatchinfo[0].TeamB2N}}</view>
       </view>
-      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:rgba(255,255,255,0.8);border-radius:20rpx;'>
         <!--B-1号位--发球-->
         <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
-        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}[发球]</view>
       </view>
       <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-left: 2rpx solid white;'>
         <!--B-1号位-->
@@ -61,10 +61,10 @@
       </view>
     </view>
     <view style='display: flex;flex-direction: row'>
-      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:rgba(255,255,255,0.8);border-radius:20rpx;'>
         <!--A-1号位--发球-->
         <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
-        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}[发球]</view>
       </view>
       <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-right: 2rpx solid white;'>
         <!--A-1号位-->
@@ -124,10 +124,10 @@
         <view class="num">{{lastmatchinfo[0].TeamA2}}</view>
         <view class="name">{{lastmatchinfo[0].TeamA2N}}</view>
       </view>
-      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-left: 2rpx solid white;background-color:rgba(255,255,255,0.8);border-radius:20rpx;'>
         <!--A-1号位--发球-->
         <view class="num">{{lastmatchinfo[0].TeamA1}}</view>
-        <view class="name">{{lastmatchinfo[0].TeamA1N}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamA1N}}[发球]</view>
       </view>
       <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-left: 2rpx solid white;'>
         <!--A-1号位-->
@@ -158,10 +158,10 @@
       </view>
     </view>
     <view style='display: flex;flex-direction: row'>
-      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:#cccccc;border-radius:20rpx;'>
+      <view wx:if="{{lastmatchinfo[0].Ball == 1}}" class='player' style='width:33.25%;border-right: 2rpx solid white;background-color:rgba(255,255,255,0.8);border-radius:20rpx;'>
         <!--B-1号位--发球-->
         <view class="num">{{lastmatchinfo[0].TeamB1}}</view>
-        <view class="name">{{lastmatchinfo[0].TeamB1N}}</view>
+        <view class="name">{{lastmatchinfo[0].TeamB1N}}[发球]</view>
       </view>
       <view wx:if="{{lastmatchinfo[0].Ball == 0}}" class='player' style='width:33.25%;border-right: 2rpx solid white;'>
         <!--B-1号位-->
@@ -272,7 +272,7 @@
 
 <view class="table" style='margin-top:10rpx'>
 <view class="livetitle">
-  <view class="livetitleA">技术统计
+  <view class="livetitleA">比赛数据
   </view>
 </view>
   <view class="livetitle" style='background-color:#8f1d78'>

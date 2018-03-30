@@ -1,4 +1,4 @@
-// pages/world/world.js
+// pages/Near/Near.js
 Page({
 
   /**
@@ -7,36 +7,11 @@ Page({
   data: {
   
   },
-  bindReadNews:function () {
-    wx.showLoading({
-      title: '此页面正在开发中……',
-      duration: 2000
-    })
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '加载中……',
-    })
-    var that = this
-    wx.request({
-      url: 'https://volleywang.cn/index.php/api/worldsports/getnews',
-      header: {
-        "content-type": "application/json;charset=utf8"
-      },
-      method: "GET",
-      data: {
-      },
-      success: function (res) {
-        wx.hideLoading()
-        that.setData({
-          news: res.data
-        })
-      }
-    })
   
   },
 

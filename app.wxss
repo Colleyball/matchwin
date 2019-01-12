@@ -1,3 +1,4 @@
+@import "/template/model.wxss";
 
 .container {
   height: 100%;

@@ -1,30 +1,32 @@
-// MatchBox.js
+// pages/find/Together/Together.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    mainpic: {
-      scoreboard:"https://volleywang.cn/liansaiquan/images/wechat/matchbox/scoreboard.jpg",
-      skillboard:"https://volleywang.cn/liansaiquan/images/wechat/matchbox/TacticalBoard.jpg",
-      coin:"https://volleywang.cn/liansaiquan/images/wechat/matchbox/Coin.jpg"
-      }
+    currentTab: 1,
   },
-  Tactical:function(){
-    wx.navigateTo({
-      url: 'Tactical/Tactical',
-    })
+  bindChange: function (e) {
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+    if (e.detail.current == 0) {
+      that.setData({
+        swiper_height: 650
+      })
+    }
+    if (e.detail.current == 1) {
+      that.setData({
+        swiper_height: that.data.player_count_a * 70 + 650
+      })
+    }
   },
-  ScoreBoard: function () {
-    wx.navigateTo({
-      url: 'ScoreBoard/ScoreBoard',
-    })
-  },
-  Coin: function () {
-    wx.navigateTo({
-      url: 'Coin/coin',
-    })
+  /*** 点击tab切换***/
+  swichNav: function (e) {
+    var that = this;
+    that.setData({
+      currentTab: e.target.dataset.current
+    });
   },
 
   /**

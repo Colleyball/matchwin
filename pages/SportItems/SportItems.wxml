@@ -1,7 +1,12 @@
 <view class="container">
-<view class="title" style="margin-top:0">战队列表</view>
-<view class="pic" bindtap="bindViewTapTeam">
+<view class="pic" bindtap="">
   <image src="{{mainpic.team}}" class="HomePic" mode="aspectFill"></image>
+  <text class="HomeTxtZh">{{matchtype}}俱乐部</text>
+  <text class="HomeTxtEn">All {{matchtype_EN}} Club</text>
+  <view class="AllTeam" bindtap="bindViewTapTeam">
+    <image class='AllTeam-img' src='../../images/total.png'></image>
+    <view class='AllTeam-text'>点击查看全部球队</view>
+  </view>
 </view>
 <view class="TopTeam">
   <view class="TopTeamTitle">球队人气排行</view>  
@@ -20,15 +25,20 @@
     <view class="teamname">{{teamrank[2].TeamName}}</view>
     <view class="exp">{{teamrank[2].Activity}}</view>
   </view>
-</view>
-
-<view class="title">全部赛事</view>
-<view class="pic" bindtap="bindViewTapMatch">
-  <image src="{{mainpic.match}}" class="HomePic" mode="aspectFill"></image>
-</view>
-
-<view class="title">排名榜单</view>
-<view class="pic" bindtap='rank'>
-  <image src="{{mainpic.rank}}" class="HomePic" mode="aspectFill" style='margin-bottom:30rpx'></image>
+  <view class="item">
+    <view class="rank">4</view>
+    <view class="teamname">{{teamrank[2].TeamName}}</view>
+    <view class="exp">{{teamrank[2].Activity}}</view>
+  </view>
+  <view class="item">
+    <view class="rank">5</view>
+    <view class="teamname">{{teamrank[3].TeamName}}</view>
+    <view class="exp">{{teamrank[3].Activity}}</view>
+  </view>
+  <view class="item">
+    <view class="rank">6</view>
+    <view class="teamname">{{teamrank[4].TeamName}}</view>
+    <view class="exp">{{teamrank[4].Activity}}</view>
+  </view>
 </view>
 </view>

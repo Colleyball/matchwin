@@ -1,6 +1,41 @@
 page,.page {
   font-family: 'PingFang SC', 'Helvetica Neue' ,Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
 }
+
+.login-cover {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10
+}
+
+.login-logo {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 100rpx 0 0 0 
+}
+
+.login-btn {
+  width: 250rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 10rpx;
+  background: #09BB07;
+  color: white;
+  text-align: center;
+  margin: 120rpx 0 0 0 
+}
+
+.login-tip {
+  width: 80%;
+  font-size: 25rpx;
+  color: rgba(0,0,0,0.5);
+}
+
 .Top{
   height: 400rpx;
   background-image: url("https://volleywang.cn/liansaiquan/images/wechat/user/bg.jpg");

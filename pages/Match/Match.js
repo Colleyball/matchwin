@@ -8,8 +8,8 @@ Page({
   data: {
   },
   matchdetails:function(e){
-    wx.redirectTo({
-      url: 'MatchDetails/MatchDetails?id=' + e.target.dataset.matchid+'&name='+e.target.dataset.matchname,
+    wx.navigateTo({
+      url: 'MatchDetails/MatchDetails?id=' + e.target.dataset.matchid + '&name=' + e.target.dataset.matchname,
     })
   },
 

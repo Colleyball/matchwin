@@ -4,15 +4,13 @@ var util = require('../../utils/util.js')
 var app = getApp()
 Page({
   data: {
-    mainpic:{
-      basketball: "https://www.volleywang.cn/liansaiquan/images/wechat/index/basketball.jpg",
-      football: "https://www.volleywang.cn/liansaiquan/images/wechat/index/football.jpg",
-      badminton: "https://www.volleywang.cn/liansaiquan/images/badminton.png",
-      volleyball: "https://www.volleywang.cn/liansaiquan/images/wechat/index/volleyball.jpg",
-      tool: "https://www.volleywang.cn/liansaiquan/images/wechat/index/tools.jpg",
+    mainpic: {
+      volleyball: "http://www.aibotiyu.com/ImgFiles/ABSports/matchwin/volleyball.png",
+      basketball: "http://www.aibotiyu.com/ImgFiles/ABSports/matchwin/basketball.png",
+      tool: "http://www.aibotiyu.com/ImgFiles/ABSports/matchwin/matchbox.png",
     },
     userInfo: {},
-    userlogin: false,
+    userlogin: true,
     Uid:0,
     weatherflag: true
   },
@@ -22,24 +20,29 @@ Page({
       url: '../logs/logs'
     })
   },
-  bindViewTapBasketball: function () {
+  Tactical: function () {
     wx.navigateTo({
-      url: '../SportItems/SportItems?id=' + '篮球'
+      url: '../MatchBox/Tactical/Tactical',
     })
   },
-  bindViewTapFootball: function () {
+  ScoreBoard: function () {
     wx.navigateTo({
-      url: '../SportItems/SportItems?id=' + '足球'
+      url: '../MatchBox/ScoreBoard/ScoreBoard',
     })
   },
-  bindViewTapVolleyball: function () {
+  Coin: function () {
     wx.navigateTo({
-      url: '../SportItems/SportItems?id='+'排球'
+      url: '../MatchBox/Coin/coin',
     })
   },
-  bindViewTapMatchBox: function () {
+  bindViewTapTeam: function (e) {
     wx.navigateTo({
-      url: '../MatchBox/MatchBox'
+      url: '../SportItems/SportItems?id=' + e.currentTarget.dataset.id + '&uid=' + this.data.Uid
+    })
+  },
+  bindViewTapMatch: function (e) {
+    wx.navigateTo({
+      url: '../Match/Match?id=' + e.currentTarget.dataset.id + '&uid=' + this.data.Uid
     })
   },
   bindUserInfo: function () {
@@ -57,23 +60,40 @@ Page({
       weatherflag: !this.data.weatherflag
     })
   },
+  Find_Court: function (e) {
+    wx.navigateTo({
+      url: '../Court/Court?sports='+e.currentTarget.dataset.sport,
+    })
+  },
+  model_login: function () {
+    wx.navigateTo({
+      url: '../User/User',
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this
-    wx.getStorage({
-      key: 'userInfo',
-      success: function (res) {
-        that.setData({
-          userInfo: res.data,
-        })
-      }
-    })
     app.getUserOpenid()
+    app.getUserInfo()
     util.getUid(this)
    //判断用户有无登陆 
   },
   onShow: function () {
     var that = this
+    setTimeout(function () {
+      that.setData({
+        userInfo: wx.getStorageSync('userInfo')
+      })
+      if (!wx.getStorageSync('userInfo')) {
+        that.setData({
+          userlogin:false
+        })
+      } else {
+        that.setData({
+          userlogin: true
+        })
+      }
+    },1000)
     wx.request({
       url: 'https://www.sojson.com/open/api/weather/json.shtml?city=杭州',
       header: {
@@ -88,6 +108,7 @@ Page({
         })
       }
     })
+    /*
     var id = setInterval(function(){
       console.log('new matchinfo')
       wx.getStorage({
@@ -191,6 +212,7 @@ Page({
         },
       })
     }.bind(that),5000)
+    */
   },
   onLaunch:function() {
   },

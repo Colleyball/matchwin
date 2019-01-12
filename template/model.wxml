@@ -1,0 +1,8 @@
+<template name="login">
+  <view class="model-login-close">x</view>
+  <view class="model-login-box ">
+    <view class="model-login-title">提示</view>
+    <view class="model-login-text">为了更好的用户体验，需要获取您的用户昵称和头像</view>
+    <view class="model-login-btn" bindtap='model_login'>一键登录</view>
+  </view>
+</template>

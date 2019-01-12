@@ -1,0 +1,55 @@
+.model-login-box {
+  position: fixed;
+  width: 550rpx;
+  height: 600rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  background: white;
+  box-shadow: 0rpx 0rpx 200rpx 50rpx rgba(255, 255, 255, 0.8);
+  top: 250rpx;
+  left: 100rpx;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  border: 1rpx solid rgba(0, 0, 0, 0.2);
+  z-index: 10
+}
+
+.model-login-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.model-login-text {
+  height: 100rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color: rgba(0, 0, 0, 0.6);
+  width: 90%;
+}
+
+.model-login-btn {
+  width: 250rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 10rpx;
+  background: #09BB07;
+  color: white;
+  text-align: center;
+  margin: 15rpx 0 0 0;
+  font-size: 45rpx;
+}
+
+.model-login-close {
+  position: fixed;
+  width: 20rpx;
+  height: 20rpx;
+  font-size: 60rpx;
+  color: rgba(0, 0, 0, 0.4);
+  left:600rpx;
+  top:250rpx;
+  z-index: 10
+}

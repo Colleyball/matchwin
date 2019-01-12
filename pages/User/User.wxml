@@ -1,3 +1,9 @@
+<view class="login-cover" hidden='{{login}}'>
+  <image src="https://volleywang.cn/liansaiquan/images/wechat/user/setting/logo.png" class="login-logo" mode='aspectfit'></image>
+  <button class="login-btn" open-type='getUserInfo' bindgetuserinfo="bindGetUserInfo">一键登录</button>
+  <view class="login-tip"></view>
+</view>
+
 <view class="Top">
   <image src="{{userInfo.avatarUrl}}" class="userpic"></image>
   <view class="name">{{userInfo.nickName}}</view>

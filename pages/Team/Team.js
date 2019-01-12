@@ -241,7 +241,12 @@ bindViewTapTeam:function(e){
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    var that = this
+    return {
+      title: '@' + wx.getStorageSync('userInfo').nickName + '分享了很多' + that.data.matchtype + '球队，快来看看吧',
+      desc: '点击进入赛事窗',
+      path: 'pages/Team/Team?id=' + that.data.matchtype,
+    }
   }
 })
 

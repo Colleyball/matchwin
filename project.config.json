@@ -120,6 +120,24 @@
 					"name": "全球体育",
 					"pathName": "pages/world/world",
 					"query": ""
+				},
+				{
+					"id": 15,
+					"name": "球队中心",
+					"pathName": "pages/SportItems/SportItems",
+					"query": "id=排球"
+				},
+				{
+					"id": -1,
+					"name": "约赛",
+					"pathName": "pages/find/Together/Together",
+					"query": "id=排球"
+				},
+				{
+					"id": -1,
+					"name": "附近的球场",
+					"pathName": "pages/Court/Court",
+					"query": ""
 				}
 			]
 		}

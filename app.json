@@ -8,7 +8,6 @@
     "pages/User/MyCard/MyCard",
     "pages/User/MyLike/MyLike",
     "pages/User/SignAll/SignAll",
-    "pages/MatchBox/MatchBox",
     "pages/SportItems/SportItems",
     "pages/Match/MatchDetails/MatchDetails",
     "pages/Team/TeamDetails/TeamDetails",
@@ -33,7 +32,9 @@
     "pages/Match/MatchDetails/schedule/end/endmatch",
     "pages/MatchBox/Coin/coin",
     "pages/world/world",
-    "pages/Near/Near"
+    "pages/Data/Data",
+    "pages/find/Together/Together",
+    "pages/Court/Court"
   ],
   "window": {
     "navigationBarTitleText": "赛事窗 MatchWin.cn",
@@ -58,6 +59,12 @@
         "iconPath": "images/find-act.png",
         "pagePath": "pages/find/find",
         "text": "发现"
+      },
+      {
+        "selectedIconPath": "images/ref.png",
+        "iconPath": "images/ref-act.png",
+        "pagePath": "pages/Data/Data",
+        "text": "比赛数据记录"
       },
       {
         "selectedIconPath": "images/world.png",

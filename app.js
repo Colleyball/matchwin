@@ -21,6 +21,7 @@ App({
               wx.setStorageSync('userInfo', res.userInfo);
             },
             fail: function (res) {
+              console.log('未授权', res)
             }
           })
           if (res.code) {
@@ -42,7 +43,7 @@ App({
             console.log('获取用户信息失败')
           }
         }
-      });
+      })
     }
   },
   getUserOpenid: function (cb) {
@@ -72,7 +73,7 @@ App({
             console.log('获取用户信息失败')
           }
         }
-      });
+      })
     }
   },//不发起用户登陆，只获取openid
   globalData:{

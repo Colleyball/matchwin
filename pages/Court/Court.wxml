@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="topbar">
+    <view class="username">附近的{{sport}}场/馆</view>
+    <view class="weather">仅供参考</view>
+  </view>
+  <view class="court_list">
+    <block wx:for="{{court.data}}" wx:key="{{index}}">
+      <view class="court" bindtap=''>
+        <view class="court_name">{{item.title}}</view>
+        <view class="court_distance">{{item._distance}}m</view>
+        <view class="court_address">{{item.address}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+
+<view class="tip"></view>

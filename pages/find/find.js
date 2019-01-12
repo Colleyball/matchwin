@@ -22,6 +22,11 @@ Page({
       url: 'winrank/winrank',
     })
   },
+  Together: function () {
+    wx.navigateTo({
+      url: 'Together/Together',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

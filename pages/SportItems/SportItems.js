@@ -35,37 +35,25 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    this.setData({
-      matchtype:options.id
-    })
     wx.setNavigationBarTitle({
-      title: options.id + ' 赛事窗',
+      title: options.id + '俱乐部 赛事窗',
     })
     if (options.id == '排球') {
       this.setData({
         mainpic: {
-          team: "https://volleywang.cn/liansaiquan/images/wechat/volleyball/team.jpg",
-          match: "https://volleywang.cn/liansaiquan/images/wechat/volleyball/competition.jpg",
-          rank: "https://volleywang.cn/liansaiquan/images/wechat/volleyball/rank.jpg"
-        }
+          team: "http://www.aibotiyu.com/ImgFiles/ABSports/matchwin/team/team-volleyball.jpg"
+        },
+        matchtype: options.id,
+        matchtype_EN: 'Volleyball'
       })
     }
     if (options.id == '篮球') {
       this.setData({
         mainpic: {
           team: "https://volleywang.cn/liansaiquan/images/wechat/basketball/team.jpg",
-          match: "https://volleywang.cn/liansaiquan/images/wechat/basketball/competition.jpg",
-          rank: "https://volleywang.cn/liansaiquan/images/wechat/basketball/rank.jpg"
-        }
-      })
-    }
-    if (options.id == '足球') {
-      this.setData({
-        mainpic: {
-          team: "https://volleywang.cn/liansaiquan/images/wechat/football/team.jpg",
-          match: "https://volleywang.cn/liansaiquan/images/wechat/football/competition.jpg",
-          rank: "https://volleywang.cn/liansaiquan/images/wechat/football/rank.jpg"
-        }
+        },
+        matchtype: options.id,
+        matchtype_EN: 'Basketball'
       })
     }
     wx.request({
@@ -143,6 +131,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    var that = this
+    return {
+      title: '@' + wx.getStorageSync('userInfo').nickName + '分享了很多'+that.data.matchtype+'球队，快来看看吧',
+      desc: '点击进入赛事窗',
+      path: 'pages/SportItems/SportItems?id=' + that.data.matchtype,
+    }
   }
 })

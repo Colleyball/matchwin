@@ -1,4 +1,4 @@
-// pages/Near/Near.js
+// pages/Data/Data.js
 Page({
 
   /**
@@ -7,12 +7,24 @@ Page({
   data: {
   
   },
+  enter: function () {
+    wx.navigateToMiniProgram({
+      appId: 'wxe5579059094161f4',
+      path: 'pages/index/index',
+      envVersion: 'release',
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
+  },
+  onshow: function () {
   },
 
   /**

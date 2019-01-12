@@ -1,0 +1,3 @@
+<view class="enter">
+  <view class="enter-buttom" bindtap='enter'>点击进入“赛事窗 比赛数据记录”</view>
+</view>

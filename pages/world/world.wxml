@@ -1,15 +1,24 @@
 <view class="container">
   <view class="topbar">
-    <view class="username">智能推荐{{userInfo.nickName}}</view>
-    <view class="weather">更新时间 {{news.data.channel.pubDate}}</view>
+    <view class="username">智能推荐</view>
+    <view class="weather">更新时间 {{news.time}}</view>
   </view>
   <view class="news_list">
-    <block wx:for="{{news.data.channel.item}}">
+    <block wx:for="{{news.data}}" wx:key="{{index}}">
       <view class="news" bindtap='bindReadnews'>
-        <view class="news_title">{{item.title}}
+        <view wx:if="{{!item.images}}" class="news_title">{{item.title}}</view>
+        <view wx:if="{{!item.images}}" class="news_from">{{item.author}} {{item.pubDate}}</view>
+        <view wx:if="{{item.images}}" class="news_description_image">
+          <view class="news_description_image_text">
+            <view class="news_description_image_title">{{item.title}}</view>
+            <view class="news_description_image_from">{{item.author}} {{item.pubDate}}</view>
+          </view>
+          <image src='{{item.images}}' class='news_description_image_pic'></image>
         </view>
-        <view class="news_info">{{item.pubDate}} {{item.author}}</view>
+        <view wx:if="{{!item.images}}" class="news_description">{{item.description}}</view>
       </view>
     </block>
   </view>
 </view>
+
+<view class="tip">此页面所有新闻直接来自‘人民网 sports.people.com.cn’,本站不对包括新闻标题、图片、正文等内容负责,也不会存储相关内容</view>

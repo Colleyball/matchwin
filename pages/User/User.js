@@ -8,39 +8,30 @@ Page({
    */
   data: {
     userInfo: {},
-    Uid:''
+    Uid:'',
+    login:true
   },
-  checkSettingStatu: function (cb) {
-    var that = this;
-    // 判断是否是第一次授权，非第一次授权且授权失败则进行提醒
-    wx.getSetting({
-      success: function success(res) {
-        var authSetting = res.authSetting;
-        if (isEmptyObject(authSetting)) {
-          console.log('首次授权');
-        } else {
-          console.log('不是第一次授权', authSetting);
-          // 没有授权的提醒
-          if (authSetting['scope.userInfo'] === false) {
-            wx.showModal({
-              title: '用户未授权',
-              content: '如需正常使用个人中心功能，请按确定并在授权管理中选中“用户信息”，然后点按确定。最后再重新进入小程序即可正常使用。',
-              showCancel: false,
-              success: function (res) {
-                if (res.confirm) {
-                  console.log('用户点击确定')
-                  wx.openSetting({
-                    success: function success(res) {
-                      console.log('openSetting success', res.authSetting);
-                    }
-                  });
-                }
-              }
-            })
-          }
-        }
-      }
-    });
+  bindGetUserInfo: function (e) {
+    var that = this
+    console.log(e.detail.userInfo)
+    if (e.detail.userInfo) {
+      that.setData({
+        userInfo: e.detail.userInfo,
+      })
+      util.setpublicinfo(wx.getStorageSync('Uid'), e.detail.userInfo)
+      wx.setStorageSync('userInfo', e.detail.userInfo)
+      //用户按了允许授权按钮
+      that.setData({
+        login:true
+      })
+    } else {
+      //用户按了拒绝按钮
+      wx.showModal({
+        title: '提示',
+        content: '如需使用用户中心的全部功能(比赛数据、关注的球队)，赛事窗需要获取您的昵称和头像，点击确认重新登录',
+        showCancel:false
+      })
+    }
   },
   bindViewTapMyCard: function () {
     wx.navigateTo({
@@ -67,15 +58,27 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    app.getUserInfo(
-      function (userInfo) {
-        //更新数据
-        that.setData({
-          userInfo: userInfo,
-        })
-        util.setpublicinfo(wx.getStorageSync('Uid'),userInfo)//插入用户公共信息
+    wx.getSetting({
+      success: function success(res) {
+        var authSetting = res.authSetting;
+        if (isEmptyObject(authSetting)) {
+          that.setData({
+            login: false
+          })
+          console.log('首次授权');
+        } else {
+          console.log('不是第一次授权', authSetting);
+          // 没有授权的提醒
+          app.getUserInfo()
+          if (!wx.getStorageSync('userInfo')) {
+            that.setData({
+              login: false
+            })
+          }
+        }
       }
-    )
+    })
+
     wx.getStorage({
       key: 'Uid',
       success: function(res) {
@@ -83,6 +86,9 @@ Page({
           Uid:res.data
         })
       },
+    })
+    that.setData({
+      userInfo: wx.getStorageSync('userInfo')
     })
   },
 
@@ -97,7 +103,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.checkSettingStatu();
   },
 
   /**

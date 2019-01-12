@@ -9,10 +9,15 @@
       </view>
     </view>
   </form>
-  <view class="title">赛事信息搜索引擎</view>
+  <view class="title">赛事信息搜索引擎（当前仅支持杭州电子科技大学）</view>
 </view>
 
 <view class="actlist">
+  <view class="act" bindtap='Together'>
+    <image class="actpic" mode='aspectFill' src="http://www.aibotiyu.com/ImgFiles/ABSports/matchwin/activity/yuesai.jpg"></image>
+    <view class="actname">约赛</view>
+    <view class="actdetail">寻找一起运动的Ta</view>
+  </view>
   <block wx:for="{{datalist}}" wx:key="id">
     <view class="act" bindtap='openact' data-thisurl='{{item.url}}'>
       <image class="actpic" src="{{item.pic}}" mode='aspectFill'></image>

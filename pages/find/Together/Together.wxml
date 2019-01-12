@@ -1,0 +1,20 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">发起</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">约赛</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">记录</view>
+</view>
+<view class="swiper-tab-temp"></view>
+<view>
+  <swiper current="{{currentTab}}" autoplay="{{false}}" class="swiper-box" duration="300" style="height:{{swiper_height}}rpx" bindchange="bindChange">
+    <swiper-item>
+
+    </swiper-item>
+   
+    <swiper-item>
+  
+    </swiper-item>
+    <swiper-item>
+
+    </swiper-item>
+  </swiper>
+</view>

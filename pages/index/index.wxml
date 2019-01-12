@@ -1,11 +1,15 @@
 <!--index.wxml-->
+<import src="../../template/model.wxml"/>
+<template wx:if="{{!userlogin}}" is="login"></template>
 <view class="container">
   <view class="topbar" bindtap='bindUserInfo'>
-    <image class="userpic" src='{{userInfo.avatarUrl}}' mode="aspectFill"></image>
-    <view class="username">{{userInfo.nickName}}</view>
-    <view class="weather" catchtap='bindWeather'>{{weather.data.wendu}}℃，{{weather.data.ganmao}}</view>
+    <image wx:if="{{!userlogin}}" class="userpic" src='https://volleywang.cn/liansaiquan/images/wechat/user/setting/logo.png' mode="aspectFill"></image>
+    <image wx:if="{{userlogin}}" class="userpic" src='{{userInfo.avatarUrl}}' mode="aspectFill"></image>
+    <view class="username" wx:if="{{!userlogin}}">未登录</view>
+    <view class="username" wx:if="{{userlogin}}">{{userInfo.nickName}}</view>
+    <view class="weather" catchtap='bindWeather'>{{weather.data.wendu}}℃ {{weather.data.ganmao}}</view>
   </view>
-  <view class="matchlive" bindtap='bindLive'>
+  <!--view class="matchlive" bindtap='bindLive'>
     <view class="live-teamA">{{matchinfo.TeamAName}}</view>
       <view class="live-score">
         <view class="live-scoreA">{{setA}}</view>
@@ -15,23 +19,64 @@
     <view class="live-teamB">{{matchinfo.TeamBName}}</view>
   </view>
   <view class="live-tip"> 正在直播
-  </view>
+  </view-->
   <view class="list">
-    <view  bindtap="bindViewTapMatchBox" class="Game">
-      <image class="HomePic" src="{{mainpic.tool}}"  mode="scaleToFill" ></image>
-      <text class="HomeTxtZh">竞赛工具箱</text>
-    </view>
-    <view  bindtap="bindViewTapVolleyball" class="Game">
-      <image class="HomePic" src="{{mainpic.volleyball}}"  mode="aspectFill" ></image>
-      <text class="HomeTxtZh">排球</text>
-    </view>
-    <view  bindtap="bindViewTapBasketball" class="Game">
+    <view class="Game" bindtap="">
       <image class="HomePic" src="{{mainpic.basketball}}"  mode="aspectFill" ></image>
       <text class="HomeTxtZh">篮球</text>
+      <text class="HomeTxtEn">Basketball</text>
     </view>
-    <view  bindtap="bindViewTapFootball" class="Game">
-      <image class="HomePic" src="{{mainpic.football}}"  mode="aspectFill" ></image>
-      <text class="HomeTxtZh">足球</text>
+    <view class="tool">
+      <view class="item" bindtap="bindViewTapTeam" data-id='篮球'>
+        <image class='item-img' src='../../images/team-red.png'></image>
+        <view class='item-text'>发现球队</view>
+      </view>
+      <view class="item" bindtap="bindViewTapMatch" data-id='篮球'>
+      <image class='item-img' src='../../images/ball.png'></image>
+        <view class='item-text'>热门赛事</view>
+      </view>
+      <view class="item" bindtap="Find_Court" data-sport='篮球'>
+        <image class='item-img' src='../../images/court-yellow.png'></image>
+        <view class='item-text'>附近的球场</view>
+      </view>
+    </view>
+    <view class="Game" bindtap="">
+      <image class="HomePic" src="{{mainpic.volleyball}}"  mode="aspectFill" ></image>
+      <text class="HomeTxtZh">排球</text>
+      <text class="HomeTxtEn">Volleyball</text>
+    </view>
+    <view class="tool">
+      <view class="item" bindtap="bindViewTapTeam" data-id='排球'>
+        <image class='item-img' src='../../images/team-red.png'></image>
+        <view class='item-text'>发现球队</view>
+      </view>
+      <view class="item" bindtap="bindViewTapMatch" data-id='排球'>
+        <image class='item-img' src='../../images/ball.png'></image>
+        <view class='item-text'>热门赛事</view>
+      </view>
+      <view class="item" bindtap="Find_Court" data-sport='排球'>
+        <image class='item-img' src='../../images/court-yellow.png'></image>
+        <view class='item-text'>附近的球场</view>
+      </view>
+    </view>
+    <view class="Game">
+      <image class="HomePic" src="{{mainpic.tool}}"  mode="scaleToFill" ></image>
+      <text class="HomeTxtZh">竞赛工具箱</text>
+      <text class="HomeTxtEn">Match Boxes</text>
+    </view>
+    <view class="tool">
+      <view class="item" bindtap="Coin">
+        <image class='item-img' src='../../images/coin.png'></image>
+        <view class='item-text'>抛硬币</view>
+      </view>
+      <view class="item" bindtap="ScoreBoard">
+      <image class='item-img' src='../../images/numeric-9-plus-box.png'></image>
+        <view class='item-text'>比分板</view>
+      </view>
+      <view class="item" bindtap="Tactical">
+      <image class='item-img' src='../../images/clipboard.png'></image>
+        <view class='item-text'>战术板</view>
+      </view>
     </view>
   </view>
 </view>

@@ -7,10 +7,10 @@ Page({
   data: {
   
   },
-  bindReadNews:function () {
+  bindReadnews:function () {
     wx.showLoading({
-      title: '此页面正在开发中……',
-      duration: 2000
+      title: '页面开发中…',
+      duration: 1500
     })
   },
 
@@ -32,8 +32,9 @@ Page({
       },
       success: function (res) {
         wx.hideLoading()
+        console.log (res.data)
         that.setData({
-          news: res.data
+          news: res.data.data
         })
       }
     })

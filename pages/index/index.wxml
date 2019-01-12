@@ -1,4 +1,3 @@
-<!--index.wxml-->
 <import src="../../template/model.wxml"/>
 <template wx:if="{{!userlogin}}" is="login"></template>
 <view class="container">
